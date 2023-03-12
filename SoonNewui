@@ -8354,15 +8354,13 @@ spawn(function()
         end
             end)
 spawn(function()
-pcall(function()
 if game:GetService("Workspace")["Fruit "].Fruit then
         Update:Nof("Fruit : Spawn")
         else
-        if not game:GetService("Workspace")["Fruit "].Fruit then
+        
         Update:Nof("Fruit : Not Spawn")
        
-       end
-       end
+       
 end
 end)
         
