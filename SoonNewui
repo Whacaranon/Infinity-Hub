@@ -3410,7 +3410,7 @@ function Goto(Pos)
     spawn(function()
         pcall(function()
             while wait() do
-                if _G.AutoAdvanceDungeon or _G.AutoLawBoss or _G.Auto_Open_Dough_Dungeon or _G.AutoMysticIsland21 or _G.AutoMysticIsland or _G.AutoMysticIsland2 or _G.Heats or _G.fts or _G.AutoDoughtBoss or _G.human or _G.ghoul or _G.Gear or _G.bot or _G.dv2 or _G.Candy or _G.Cocoa or _G.Ectoplasm or _G.AutoRedioactive or _G.Chest or _G.AutoSaw or _G.Sea1 or _G.Sea or _G.Magma or _G.Fish or _G.My or _G.God or _G.combo or _G.Auto_Bone2 or _G.AutoDoughtBoss or _G.Auto_DungeonMobAura or _G.AutoFarmChest or _G.AutoFarmBossHallow or _G.AutoFarmSwanGlasses or _G.AutoLongSword or _G.AutoBlackSpikeycoat or _G.AutoElectricClaw or _G.AutoFarmGunMastery or _G.AutoHolyTorch or _G.AutoLawRaid or _G.AutoFarmBoss or _G.AutoTwinHooks or _G.AutoOpenSwanDoor or _G.AutoDragon_Trident or _G.AutoSaber or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.TeleportIsland or _G.Auto_EvoRace or _G.AutoFarmAllMsBypassType or _G.AutoObservationv2 or _G.AutoMusketeerHat or _G.AutoEctoplasm or _G.AutoRengoku or _G.Auto_Rainbow_Haki or _G.AutoObservation or _G.AutoDarkDagger or _G.Safe_Mode or _G.MasteryFruit or _G.AutoBudySword or _G.AutoBounty or _G.AutoAllBoss or _G.Auto_Bounty or _G.AutoSharkman or _G.Auto_Mastery_Fruit or _G.Auto_Mastery_Gun or _G.Auto_Dungeon or _G.Auto_Cavender or _G.Auto_Pole or _G.Auto_Kill_Ply or _G.Auto_Factory or _G.AutoSecondSea or _G.TeleportPly or _G.AutoBartilo or _G.Auto_DarkBoss or _G.GrabChest or _G.AutoFarmBounty or _G.Holy_Torch or _G.AutoFarm or _G.Clip or FarmBoss or _G.AutoElitehunter or _G.AutoThirdSea or _G.Auto_Bone == true then
+                if _G.AutoAdvanceDungeon _G.egg or or _G.AutoLawBoss or _G.Auto_Open_Dough_Dungeon or _G.AutoMysticIsland21 or _G.AutoMysticIsland or _G.AutoMysticIsland2 or _G.Heats or _G.fts or _G.AutoDoughtBoss or _G.human or _G.ghoul or _G.Gear or _G.bot or _G.dv2 or _G.Candy or _G.Cocoa or _G.Ectoplasm or _G.AutoRedioactive or _G.Chest or _G.AutoSaw or _G.Sea1 or _G.Sea or _G.Magma or _G.Fish or _G.My or _G.God or _G.combo or _G.Auto_Bone2 or _G.AutoDoughtBoss or _G.Auto_DungeonMobAura or _G.AutoFarmChest or _G.AutoFarmBossHallow or _G.AutoFarmSwanGlasses or _G.AutoLongSword or _G.AutoBlackSpikeycoat or _G.AutoElectricClaw or _G.AutoFarmGunMastery or _G.AutoHolyTorch or _G.AutoLawRaid or _G.AutoFarmBoss or _G.AutoTwinHooks or _G.AutoOpenSwanDoor or _G.AutoDragon_Trident or _G.AutoSaber or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.TeleportIsland or _G.Auto_EvoRace or _G.AutoFarmAllMsBypassType or _G.AutoObservationv2 or _G.AutoMusketeerHat or _G.AutoEctoplasm or _G.AutoRengoku or _G.Auto_Rainbow_Haki or _G.AutoObservation or _G.AutoDarkDagger or _G.Safe_Mode or _G.MasteryFruit or _G.AutoBudySword or _G.AutoBounty or _G.AutoAllBoss or _G.Auto_Bounty or _G.AutoSharkman or _G.Auto_Mastery_Fruit or _G.Auto_Mastery_Gun or _G.Auto_Dungeon or _G.Auto_Cavender or _G.Auto_Pole or _G.Auto_Kill_Ply or _G.Auto_Factory or _G.AutoSecondSea or _G.TeleportPly or _G.AutoBartilo or _G.Auto_DarkBoss or _G.GrabChest or _G.AutoFarmBounty or _G.Holy_Torch or _G.AutoFarm or _G.Clip or FarmBoss or _G.AutoElitehunter or _G.AutoThirdSea or _G.Auto_Bone == true then
                     if not game:GetService("Players").LocalPlayer.Character.HumanoidRootPart:FindFirstChild("BodyClip") then
                         local Noclip = Instance.new("BodyVelocity")
                         Noclip.Name = "BodyClip"
@@ -3426,7 +3426,7 @@ function Goto(Pos)
     spawn(function()
         pcall(function()
             game:GetService("RunService").Stepped:Connect(function()
-                if _G.AutoAdvanceDungeon or _G.Auto_Open_Dough_Dungeon or _G.AutoLawBoss or _G.AutoMysticIsland2 or _G.Heats or _G.fts or _G.AutoDoughtBoss or _G.human or _G.ghoul or _G.Gear or _G.bot or _G.dv2 or _G.Cocoa or _G.Candy or _G.Ectoplasm or _G.Chest1 or _G.AutoRedioactive or _G.AutoSaw or _G.Chest or _G.Sea1 or _G.Sea or _G.Magma or _G.Fish or _G.My or _G.God or _G.combo or _G.Auto_Bone2 or _G.AutoDoughtBoss or _G.Auto_DungeonMobAura or _G.AutoFarmChest or _G.AutoFarmBossHallow or _G.AutoFarmSwanGlasses or _G.AutoLongSword or _G.AutoBlackSpikeycoat or _G.AutoElectricClaw or _G.AutoFarmGunMastery or _G.AutoHolyTorch or _G.AutoLawRaid or _G.AutoFarmBoss or _G.AutoTwinHooks or _G.AutoOpenSwanDoor or _G.AutoDragon_Trident or _G.AutoSaber or _G.NOCLIP or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.TeleportIsland or _G.Auto_EvoRace or _G.AutoFarmAllMsBypassType or _G.AutoObservationv2 or _G.AutoMusketeerHat or _G.AutoEctoplasm or _G.AutoRengoku or _G.Auto_Rainbow_Haki or _G.AutoObservation or _G.AutoDarkDagger or _G.Safe_Mode or _G.MasteryFruit or _G.AutoBudySword or _G.AutoBounty or _G.AutoAllBoss or _G.Auto_Bounty or _G.AutoSharkman or _G.Auto_Mastery_Fruit or _G.Auto_Mastery_Gun or _G.Auto_Dungeon or _G.Auto_Cavender or _G.Auto_Pole or _G.Auto_Kill_Ply or _G.Auto_Factory or _G.AutoSecondSea or _G.TeleportPly or _G.AutoBartilo or _G.Auto_DarkBoss or _G.GrabChest or _G.AutoFarmBounty or _G.Holy_Torch or _G.AutoFarm or _G.Clip or _G.AutoElitehunter or _G.AutoThirdSea or _G.Auto_Bone == true then
+                if _G.AutoAdvanceDungeon or _G.egg or _G.Auto_Open_Dough_Dungeon or _G.AutoLawBoss or _G.AutoMysticIsland2 or _G.Heats or _G.fts or _G.AutoDoughtBoss or _G.human or _G.ghoul or _G.Gear or _G.bot or _G.dv2 or _G.Cocoa or _G.Candy or _G.Ectoplasm or _G.Chest1 or _G.AutoRedioactive or _G.AutoSaw or _G.Chest or _G.Sea1 or _G.Sea or _G.Magma or _G.Fish or _G.My or _G.God or _G.combo or _G.Auto_Bone2 or _G.AutoDoughtBoss or _G.Auto_DungeonMobAura or _G.AutoFarmChest or _G.AutoFarmBossHallow or _G.AutoFarmSwanGlasses or _G.AutoLongSword or _G.AutoBlackSpikeycoat or _G.AutoElectricClaw or _G.AutoFarmGunMastery or _G.AutoHolyTorch or _G.AutoLawRaid or _G.AutoFarmBoss or _G.AutoTwinHooks or _G.AutoOpenSwanDoor or _G.AutoDragon_Trident or _G.AutoSaber or _G.NOCLIP or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.TeleportIsland or _G.Auto_EvoRace or _G.AutoFarmAllMsBypassType or _G.AutoObservationv2 or _G.AutoMusketeerHat or _G.AutoEctoplasm or _G.AutoRengoku or _G.Auto_Rainbow_Haki or _G.AutoObservation or _G.AutoDarkDagger or _G.Safe_Mode or _G.MasteryFruit or _G.AutoBudySword or _G.AutoBounty or _G.AutoAllBoss or _G.Auto_Bounty or _G.AutoSharkman or _G.Auto_Mastery_Fruit or _G.Auto_Mastery_Gun or _G.Auto_Dungeon or _G.Auto_Cavender or _G.Auto_Pole or _G.Auto_Kill_Ply or _G.Auto_Factory or _G.AutoSecondSea or _G.TeleportPly or _G.AutoBartilo or _G.Auto_DarkBoss or _G.GrabChest or _G.AutoFarmBounty or _G.Holy_Torch or _G.AutoFarm or _G.Clip or _G.AutoElitehunter or _G.AutoThirdSea or _G.Auto_Bone == true then
                     for _, v in pairs(game:GetService("Players").LocalPlayer.Character:GetDescendants()) do
                         if v:IsA("BasePart") then
                             v.CanCollide = false    
@@ -3663,7 +3663,7 @@ elseif _G.BlackScreen == false then
     blackscreen(false)
 end
 end)
-
+_G.FastAttack = true
      Main:AddToggleRight("Fast Attack",_G.FastAttack,function(a)
  _G.FastAttack = a
     end) 
@@ -3733,7 +3733,7 @@ function DamageAura()
 				debug.setupvalue(ac.attack, 4, AcAttack7)
 				debug.setupvalue(ac.attack, 7, AcAttack10)
 				for k, v in pairs(ac.animator.anims.basic) do
-					v:Play(0.01,0.01,0.01,0.05,1,0.2,2)
+					v:Play(0.01,0.01,0.01,0.05,1,0.2,2,5,7,9,0.1,4)
 				end                 
 				if game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") and ac.blades and ac.blades[1] then 
 					game:GetService("ReplicatedStorage").RigControllerEvent:FireServer("weaponChange",tostring(CurrentWeapon()))
@@ -3768,7 +3768,7 @@ function AttackFunction()
 				debug.setupvalue(ac.attack, 4, AcAttack7)
 				debug.setupvalue(ac.attack, 7, AcAttack10)
 				for k, v in pairs(ac.animator.anims.basic) do
-					v:Play(0.01,0.01,0.01,0.05,0.1,1,2,0.02)
+					v:Play(0.01,0.01,0.01,0.05,0.1,1,2,0.02,5,7,0,3,0.1)
 				end                 
 				if game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") and ac.blades and ac.blades[1] then 
 					game:GetService("ReplicatedStorage").RigControllerEvent:FireServer("weaponChange",tostring(CurrentWeapon()))
@@ -3782,7 +3782,7 @@ end
 
 task.spawn(function()
     pcall(function()
-    while task.wait(0.09) do
+    while task.wait(0.01) do
         if _G.FastAttack then
             AttackFunction()
            end
@@ -6142,7 +6142,7 @@ spawn(function()
             [2] = "MarineBrigade"
              }
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))
-            game:GetService("Workspace").Boats.MarineBrigade.VehicleSeat.MaxSpeed = 100
+            game:GetService("Workspace").Boats.MarineBrigade.VehicleSeat.MaxSpeed = 300
             if _G.AutoMysticIsland2 == false then
                 topostp(CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame))
             end
@@ -6283,71 +6283,21 @@ end
 
     
 Main:AddSeperatorLeft("Event")
-Heat = Main:AddLabelLeft("")
-
-spawn(function()
-    while wait(0.1) do
-        pcall(function()
-for i,v in pairs(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventory")) do
-    if v["Type"] == "Material" then
-    if v.Name == "Hearts" then
-            Heat:Set("Heart : "..v.Count)
-    end
-    end
-end
-
-        end)
-    end
+ Main:AddToggleLeft("TP To Egg",nil,function(a)
+_G.egg = a
+StopTween(_G.egg)
 end)
 
-Main:AddToggleLeft("Auto Hearts",nil,function(a)
-    _G.Heats = a
-    Stoptween(_G.Heats)
-    end)
-    
-    spawn(function()
-        while wait() do 
-            if _G.Heats and World3 then
-                pcall(function()
-                    if game:GetService("Workspace").Enemies:FindFirstChild("Sweet Thief [Lv. 2350]") or game:GetService("Workspace").Enemies:FindFirstChild("Candy Rebel [Lv. 2375]") or game:GetService("Workspace").Enemies:FindFirstChild("Candy Pirate [Lv. 2400]") or game:GetService("Workspace").Enemies:FindFirstChild("Snow Demon [Lv. 2425]") then
-                        for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-                            if v.Name == "Sweet Thief [Lv. 2350]" or v.Name == "Candy Rebel [Lv. 2375]" or v.Name == "Candy Pirate [Lv. 2400]" or v.Name == "Snow Demon [Lv. 2425]" then
-                                if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
-                                    repeat task.wait()
-                                        AutoHaki()
-                                        EquipWeapon(_G.SelectWeapon)
-                                        v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
-                                        v.Head.CanCollide = false 
-                                        StartMagnetHeats = true
-                                        PosMonHeats = v.HumanoidRootPart.CFrame
-                                        topos(v.HumanoidRootPart.CFrame * CFrame.new(5,25,7))
-                                        game:GetService("VirtualUser"):CaptureController()
-                                        game:GetService("VirtualUser"):Button1Down(Vector2.new(1280,672))
-                                    until not _G.Heats or not v.Parent or v.Humanoid.Health <= 0
-                                end
+spawn(function()
+            while wait() do
+                if _G.egg then
+                    pcall(function()
+                            topos(CFrame.new(workspace["Fruit "].Handle.Position))
+                            end)
                             end
-                        end
-                    else
-                        StartMagnetHeats = false
-                        for i,v in pairs(game:GetService("ReplicatedStorage"):GetChildren()) do 
-                           if game:GetService("ReplicatedStorage"):FindFirstChild("Sweet Thief [Lv. 2350]") then
-                                    topos(game:GetService("ReplicatedStorage"):FindFirstChild("Sweet Thief [Lv. 2350]").HumanoidRootPart.CFrame * CFrame.new(5,25,7))
-                                elseif game:GetService("ReplicatedStorage"):FindFirstChild("Candy Rebel [Lv. 2375]") then
-                                    topos(game:GetService("ReplicatedStorage"):FindFirstChild("Candy Rebel [Lv. 2375]").HumanoidRootPart.CFrame * CFrame.new(5,25,7))
-                                    elseif game:GetService("ReplicatedStorage"):FindFirstChild("Candy Pirate [Lv. 2400]") then
-                                    topos(game:GetService("ReplicatedStorage"):FindFirstChild("Candy Pirate [Lv. 2400]").HumanoidRootPart.CFrame * CFrame.new(5,25,7))
-                                    elseif game:GetService("ReplicatedStorage"):FindFirstChild("Snow Demon [Lv. 2425]") then
-                                    topos(game:GetService("ReplicatedStorage"):FindFirstChild("Snow Demon [Lv. 2425]").HumanoidRootPart.CFrame * CFrame.new(5,25,7))
-                                    
                             end
-                        end
-                    end
-                    topos(CFrame.new(-1085.429931640625, 111.85322570800781, -14483.537109375))
-               end)
-            end
-        end
-    end)
+                            end)
+
 
 Main:AddSeperatorLeft("Race V4")
 
@@ -9553,7 +9503,7 @@ end
           function Sate()
     		if game:GetService("Workspace")["Fruit "].Fruit then
                     befruitp:Set("Fruit : 🟢")    
-                elseif game:GetService("Workspace")["Fruit "] then
+                elseif not game:GetService("Workspace")["Fruit "] then
                     befruitp:Set("Fruit : 🔴")    
                 end
                 end
@@ -9587,7 +9537,7 @@ spawn(function()
             while wait() do
                 if _G.fts then
                     pcall(function()
-                            topos(CFrame.new(game:GetService("Workspace")["Fruit "].Fruit.Position))
+                            topos(CFrame.new(workspace["Fruit "].Handle.Position))
                             end)
                             end
                             end
