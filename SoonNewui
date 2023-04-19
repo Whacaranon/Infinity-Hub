@@ -1,26 +1,3 @@
-_G.Team = "Pirate"
-
-
-if game:GetService("Players").LocalPlayer.PlayerGui.Main:FindFirstChild("ChooseTeam") then
-	repeat wait()
-		if game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Main").ChooseTeam.Visible == true then
-			if _G.Team == "Pirate" then
-				for i, v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton.Activated)) do                                                                                                
-					v.Function()
-				end
-			elseif _G.Team == "Marine" then
-				for i, v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Marines.Frame.ViewportFrame.TextButton.Activated)) do                                                                                                
-					v.Function()
-				end
-			else
-				for i, v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton.Activated)) do                                                                                                
-					v.Function()
-				end
-			end
-		end
-	until game.Players.LocalPlayer.Team ~= nil and game:IsLoaded()
-end
-
 local ZenHub = Instance.new("ScreenGui")
 local Open = Instance.new("TextButton")
 local fuckshit = Instance.new("UICorner")
@@ -189,7 +166,7 @@ local osfunc = {}
  WindowStrokemain.Enabled = true
  WindowStrokemain.Archivable = true
 	
-	Main:TweenSize(UDim2.new(0, 600, 0, 600),"Out","Quad",0,true)
+	Main:TweenSize(UDim2.new(0, 600, 0, 400),"Out","Quad",0,true)
 
 	local MCNR = Instance.new("UICorner")
 	MCNR.Name = "MCNR"
@@ -250,7 +227,7 @@ local ListNof = Instance.new("Frame")
 	ListNof.BackgroundColor3 = Color3.fromRGB(255,255,255)
 	ListNof.BackgroundTransparency = 1.000
 	ListNof.Position = UDim2.new(0.778017223, 0, -0.00217864919, 0)
-	ListNof.Size = UDim2.new(0, 206, 0, 600)
+	ListNof.Size = UDim2.new(0, 206, 0, 400)
 
 	NofList.Name = "NofList"
 	NofList.Parent = ListNof
@@ -505,7 +482,7 @@ local WindowStrokelol = Instance.new("UIStroke")
  PLL.Parent = ScrollTab
  PLL.FillDirection = Enum.FillDirection.Horizontal
  PLL.SortOrder = Enum.SortOrder.LayoutOrder
- PLL.Padding = UDim.new(0.02)
+ PLL.Padding = UDim.new(0)
  
  local PPD = Instance.new("UIPadding")
  PPD.Name = "PPD"
@@ -518,8 +495,8 @@ local WindowStrokelol = Instance.new("UIStroke")
  Page.Parent = Main
  Page.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
  Page.BackgroundTransparency = 1
- Page.Position = UDim2.new(0, 1, 0.100000003, -25)
- Page.Size = UDim2.new(0, 300, 0, 560)
+ Page.Position = UDim2.new(0, 1, 0.100000003, -5)
+ Page.Size = UDim2.new(0, 300, 0, 380)
  
  WindowStrokeshit.Name = "WindowStroke"
  WindowStrokeshit.Parent = Page
@@ -546,7 +523,7 @@ local WindowStrokelol = Instance.new("UIStroke")
  MainPage.ClipsDescendants = true
  MainPage.BackgroundColor3 = Color3.fromRGB(255,255,255)
  MainPage.BackgroundTransparency = 1.000
- MainPage.Size = UDim2.new(0, 300, 0, 558)
+ MainPage.Size = UDim2.new(0, 300, 0, 380)
  
  local PageList = Instance.new("Folder")
  PageList.Name = "PageList"
@@ -571,8 +548,8 @@ local Page2 = Instance.new("Frame")
  Page2.Parent = Main
  Page2.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
  Page2.BackgroundTransparency = 1
- Page2.Position = UDim2.new(0, 302, 0.100000003, -25)
- Page2.Size = UDim2.new(0, 300, 0, 560)
+ Page2.Position = UDim2.new(0, 302, 0.100000003, -5)
+ Page2.Size = UDim2.new(0, 300, 0, 378)
  
  WindowStrokeshit2.Name = "WindowStroke"
  WindowStrokeshit2.Parent = Page2
@@ -599,7 +576,7 @@ local Page2 = Instance.new("Frame")
  MainPage2.ClipsDescendants = true
  MainPage2.BackgroundColor3 = Color3.fromRGB(255,255,255)
  MainPage2.BackgroundTransparency = 1.000
- MainPage2.Size = UDim2.new(0, 300, 0, 558)
+ MainPage2.Size = UDim2.new(0, 300, 0, 378)
  
  local PageList2 = Instance.new("Folder")
  PageList2.Name = "PageList"
@@ -627,7 +604,7 @@ if uihide == false then
  Main:TweenSize(UDim2.new(0, 0, 0, 0),"In","Quad",0,true)
 else
  uihide = false
- Main:TweenSize(UDim2.new(0, 600, 0, 600),"Out","Quad",0,true)
+ Main:TweenSize(UDim2.new(0, 600, 0, 400),"Out","Quad",0,true)
 end
 end
  end)
@@ -679,7 +656,7 @@ WindowStroke.Name = "WindowStroke"
 		MainFramePage.BackgroundColor3 = Color3.fromRGB(51,255,255)
 		MainFramePage.BackgroundTransparency = 1.000
 		MainFramePage.BorderSizePixel = 1
-		MainFramePage.Size = UDim2.new(0, 390, 0, 560)
+		MainFramePage.Size = UDim2.new(0, 390, 0, 370)
 		MainFramePage.CanvasSize = UDim2.new(0, 0, 0, 0)
 		MainFramePage.ScrollBarThickness = 0
 		
@@ -765,7 +742,7 @@ WindowStroke.Name = "WindowStroke"
 		MainFramePage2.BackgroundColor3 = Color3.fromRGB(51,255,255)
 		MainFramePage2.BackgroundTransparency = 1.000
 		MainFramePage2.BorderSizePixel = 0
-		MainFramePage2.Size = UDim2.new(0, 320, 0, 560)
+		MainFramePage2.Size = UDim2.new(0, 320, 0, 370)
 		MainFramePage2.CanvasSize = UDim2.new(0, 0, 0, 0)
 		MainFramePage2.ScrollBarThickness = 0
 		
@@ -2857,7 +2834,6 @@ end
 end
 
 
-
     function Hop()
         local PlaceID = game.PlaceId
         local AllIDs = {}
@@ -3410,7 +3386,7 @@ function Goto(Pos)
     spawn(function()
         pcall(function()
             while wait() do
-                if _G.AutoFarmFruit or _G.AutoAdvanceDungeon or _G.egg  or _G.AutoLawBoss or _G.Auto_Open_Dough_Dungeon or _G.AutoMysticIsland21 or _G.AutoMysticIsland or _G.AutoMysticIsland2 or _G.Heats or _G.fts or _G.AutoDoughtBoss or _G.human or _G.ghoul or _G.Gear or _G.bot or _G.dv2 or _G.Candy or _G.Cocoa or _G.Ectoplasm or _G.AutoRedioactive or _G.Chest or _G.AutoSaw or _G.Sea1 or _G.Sea or _G.Magma or _G.Fish or _G.My or _G.God or _G.combo or _G.Auto_Bone2 or _G.AutoDoughtBoss or _G.Auto_DungeonMobAura or _G.AutoFarmChest or _G.AutoFarmBossHallow or _G.AutoFarmSwanGlasses or _G.AutoLongSword or _G.AutoBlackSpikeycoat or _G.AutoElectricClaw or _G.AutoFarmGunMastery or _G.AutoHolyTorch or _G.AutoLawRaid or _G.AutoFarmBoss or _G.AutoTwinHooks or _G.AutoOpenSwanDoor or _G.AutoDragon_Trident or _G.AutoSaber or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.TeleportIsland or _G.Auto_EvoRace or _G.AutoFarmAllMsBypassType or _G.AutoObservationv2 or _G.AutoMusketeerHat or _G.AutoEctoplasm or _G.AutoRengoku or _G.Auto_Rainbow_Haki or _G.AutoObservation or _G.AutoDarkDagger or _G.Safe_Mode or _G.MasteryFruit or _G.AutoBudySword or _G.AutoBounty or _G.AutoAllBoss or _G.Auto_Bounty or _G.AutoSharkman or _G.Auto_Mastery_Fruit or _G.Auto_Mastery_Gun or _G.Auto_Dungeon or _G.Auto_Cavender or _G.Auto_Pole or _G.Auto_Kill_Ply or _G.Auto_Factory or _G.AutoSecondSea or _G.TeleportPly or _G.AutoBartilo or _G.Auto_DarkBoss or _G.GrabChest or _G.AutoFarmBounty or _G.Holy_Torch or _G.AutoFarm or _G.Clip or FarmBoss or _G.AutoElitehunter or _G.AutoThirdSea or _G.Auto_Bone == true then
+                if _G.AutoFarmFruit or _G.dv2 or _G.AutoAdvanceDungeon or _G.egg  or _G.AutoLawBoss or _G.Auto_Open_Dough_Dungeon or _G.AutoMysticIsland21 or _G.AutoMysticIsland or _G.AutoMysticIsland2 or _G.Heats or _G.fts or _G.AutoDoughtBoss or _G.human or _G.ghoul or _G.Gear or _G.bot or _G.dv2 or _G.Candy or _G.Cocoa or _G.Ectoplasm or _G.AutoRedioactive or _G.Chest or _G.AutoSaw or _G.Sea1 or _G.Sea or _G.Magma or _G.Fish or _G.My or _G.God or _G.combo or _G.Auto_Bone2 or _G.AutoDoughtBoss or _G.Auto_DungeonMobAura or _G.AutoFarmChest or _G.AutoFarmBossHallow or _G.AutoFarmSwanGlasses or _G.AutoLongSword or _G.AutoBlackSpikeycoat or _G.AutoElectricClaw or _G.AutoFarmGunMastery or _G.AutoHolyTorch or _G.AutoLawRaid or _G.AutoFarmBoss or _G.AutoTwinHooks or _G.AutoOpenSwanDoor or _G.AutoDragon_Trident or _G.AutoSaber or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.TeleportIsland or _G.Auto_EvoRace or _G.AutoFarmAllMsBypassType or _G.AutoObservationv2 or _G.AutoMusketeerHat or _G.AutoEctoplasm or _G.AutoRengoku or _G.Auto_Rainbow_Haki or _G.AutoObservation or _G.AutoDarkDagger or _G.Safe_Mode or _G.MasteryFruit or _G.AutoBudySword or _G.AutoBounty or _G.AutoAllBoss or _G.Auto_Bounty or _G.AutoSharkman or _G.Auto_Mastery_Fruit or _G.Auto_Mastery_Gun or _G.Auto_Dungeon or _G.Auto_Cavender or _G.Auto_Pole or _G.Auto_Kill_Ply or _G.Auto_Factory or _G.AutoSecondSea or _G.TeleportPly or _G.AutoBartilo or _G.Auto_DarkBoss or _G.GrabChest or _G.AutoFarmBounty or _G.Holy_Torch or _G.AutoFarm or _G.Clip or FarmBoss or _G.AutoElitehunter or _G.AutoThirdSea or _G.Auto_Bone == true then
                     if not game:GetService("Players").LocalPlayer.Character.HumanoidRootPart:FindFirstChild("BodyClip") then
                         local Noclip = Instance.new("BodyVelocity")
                         Noclip.Name = "BodyClip"
@@ -3426,7 +3402,7 @@ function Goto(Pos)
     spawn(function()
         pcall(function()
             game:GetService("RunService").Stepped:Connect(function()
-                if _G.AutoAdvanceDungeon or _G.AutoFarmFruit or _G.egg or _G.Auto_Open_Dough_Dungeon or _G.AutoLawBoss or _G.AutoMysticIsland2 or _G.Heats or _G.fts or _G.AutoDoughtBoss or _G.human or _G.ghoul or _G.Gear or _G.bot or _G.dv2 or _G.Cocoa or _G.Candy or _G.Ectoplasm or _G.Chest1 or _G.AutoRedioactive or _G.AutoSaw or _G.Chest or _G.Sea1 or _G.Sea or _G.Magma or _G.Fish or _G.My or _G.God or _G.combo or _G.Auto_Bone2 or _G.AutoDoughtBoss or _G.Auto_DungeonMobAura or _G.AutoFarmChest or _G.AutoFarmBossHallow or _G.AutoFarmSwanGlasses or _G.AutoLongSword or _G.AutoBlackSpikeycoat or _G.AutoElectricClaw or _G.AutoFarmGunMastery or _G.AutoHolyTorch or _G.AutoLawRaid or _G.AutoFarmBoss or _G.AutoTwinHooks or _G.AutoOpenSwanDoor or _G.AutoDragon_Trident or _G.AutoSaber or _G.NOCLIP or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.TeleportIsland or _G.Auto_EvoRace or _G.AutoFarmAllMsBypassType or _G.AutoObservationv2 or _G.AutoMusketeerHat or _G.AutoEctoplasm or _G.AutoRengoku or _G.Auto_Rainbow_Haki or _G.AutoObservation or _G.AutoDarkDagger or _G.Safe_Mode or _G.MasteryFruit or _G.AutoBudySword or _G.AutoBounty or _G.AutoAllBoss or _G.Auto_Bounty or _G.AutoSharkman or _G.Auto_Mastery_Fruit or _G.Auto_Mastery_Gun or _G.Auto_Dungeon or _G.Auto_Cavender or _G.Auto_Pole or _G.Auto_Kill_Ply or _G.Auto_Factory or _G.AutoSecondSea or _G.TeleportPly or _G.AutoBartilo or _G.Auto_DarkBoss or _G.GrabChest or _G.AutoFarmBounty or _G.Holy_Torch or _G.AutoFarm or _G.Clip or _G.AutoElitehunter or _G.AutoThirdSea or _G.Auto_Bone == true then
+                if _G.AutoAdvanceDungeon or _G.dv2 or _G.AutoFarmFruit or _G.egg or _G.Auto_Open_Dough_Dungeon or _G.AutoLawBoss or _G.AutoMysticIsland2 or _G.Heats or _G.fts or _G.AutoDoughtBoss or _G.human or _G.ghoul or _G.Gear or _G.bot or _G.dv2 or _G.Cocoa or _G.Candy or _G.Ectoplasm or _G.Chest1 or _G.AutoRedioactive or _G.AutoSaw or _G.Chest or _G.Sea1 or _G.Sea or _G.Magma or _G.Fish or _G.My or _G.God or _G.combo or _G.Auto_Bone2 or _G.AutoDoughtBoss or _G.Auto_DungeonMobAura or _G.AutoFarmChest or _G.AutoFarmBossHallow or _G.AutoFarmSwanGlasses or _G.AutoLongSword or _G.AutoBlackSpikeycoat or _G.AutoElectricClaw or _G.AutoFarmGunMastery or _G.AutoHolyTorch or _G.AutoLawRaid or _G.AutoFarmBoss or _G.AutoTwinHooks or _G.AutoOpenSwanDoor or _G.AutoDragon_Trident or _G.AutoSaber or _G.NOCLIP or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.TeleportIsland or _G.Auto_EvoRace or _G.AutoFarmAllMsBypassType or _G.AutoObservationv2 or _G.AutoMusketeerHat or _G.AutoEctoplasm or _G.AutoRengoku or _G.Auto_Rainbow_Haki or _G.AutoObservation or _G.AutoDarkDagger or _G.Safe_Mode or _G.MasteryFruit or _G.AutoBudySword or _G.AutoBounty or _G.AutoAllBoss or _G.Auto_Bounty or _G.AutoSharkman or _G.Auto_Mastery_Fruit or _G.Auto_Mastery_Gun or _G.Auto_Dungeon or _G.Auto_Cavender or _G.Auto_Pole or _G.Auto_Kill_Ply or _G.Auto_Factory or _G.AutoSecondSea or _G.TeleportPly or _G.AutoBartilo or _G.Auto_DarkBoss or _G.GrabChest or _G.AutoFarmBounty or _G.Holy_Torch or _G.AutoFarm or _G.Clip or _G.AutoElitehunter or _G.AutoThirdSea or _G.Auto_Bone == true then
                     for _, v in pairs(game:GetService("Players").LocalPlayer.Character:GetDescendants()) do
                         if v:IsA("BasePart") then
                             v.CanCollide = false    
@@ -3439,7 +3415,7 @@ function Goto(Pos)
     
     spawn(function()
         while wait() do
-            if _G.AutoDoughtBoss or _G.AutoFarmFruit or _G.Heats or _G.Auto_Open_Dough_Dungeon or _G.AutoLawBoss or _G.human or _G.AutoDoughtBoss or _G.ghoul or _G.Candy or _G.Gear or _G.dv2 or _G.Cocoa or _G.Chest1 or _G.Ectoplasm or _G.AutoRedioactive or _G.AutoSaw or _G.Chest or _G.Sea1 or _G.Sea or _G.Magma or _G.Fish or _G.My or _G.God or _G.combo or _G.Auto_Bone2 or _G.Auto_DungeonMobAura or _G.AutoFarmChest or _G.AutoFarmBossHallow or _G.AutoFarmSwanGlasses or _G.AutoLongSword or _G.AutoBlackSpikeycoat or _G.AutoElectricClaw or _G.AutoFarmGunMastery or _G.AutoHolyTorch or _G.AutoLawRaid or _G.AutoFarmBoss or _G.AutoTwinHooks or _G.AutoOpenSwanDoor or _G.AutoDragon_Trident or _G.AutoSaber or _G.NOCLIP or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.TeleportIsland or _G.Auto_EvoRace or _G.AutoFarmAllMsBypassType or _G.AutoObservationv2 or _G.AutoMusketeerHat or _G.AutoEctoplasm or _G.AutoRengoku or _G.Auto_Rainbow_Haki or _G.AutoObservation or _G.AutoDarkDagger or _G.Safe_Mode or _G.MasteryFruit or _G.AutoBudySword or _G.AutoAllBoss or _G.Auto_Bounty or _G.AutoSharkman or _G.Auto_Mastery_Fruit or _G.Auto_Mastery_Gun or _G.Auto_Dungeon or _G.Auto_Cavender or _G.Auto_Pole or _G.Auto_Kill_Ply or _G.Auto_Factory or _G.AutoSecondSea or _G.AutoBartilo or _G.Auto_DarkBoss or _G.AutoFarm or _G.Clip or _G.AutoElitehunter or _G.AutoThirdSea or _G.Auto_Bone == true then
+            if _G.AutoDoughtBoss or _G.AutoFarmFruit or _G.dv2 or _G.Heats or _G.Auto_Open_Dough_Dungeon or _G.AutoLawBoss or _G.human or _G.AutoDoughtBoss or _G.ghoul or _G.Candy or _G.Gear or _G.dv2 or _G.Cocoa or _G.Chest1 or _G.Ectoplasm or _G.AutoRedioactive or _G.AutoSaw or _G.Chest or _G.Sea1 or _G.Sea or _G.Magma or _G.Fish or _G.My or _G.God or _G.combo or _G.Auto_Bone2 or _G.Auto_DungeonMobAura or _G.AutoFarmChest or _G.AutoFarmBossHallow or _G.AutoFarmSwanGlasses or _G.AutoLongSword or _G.AutoBlackSpikeycoat or _G.AutoElectricClaw or _G.AutoFarmGunMastery or _G.AutoHolyTorch or _G.AutoLawRaid or _G.AutoFarmBoss or _G.AutoTwinHooks or _G.AutoOpenSwanDoor or _G.AutoDragon_Trident or _G.AutoSaber or _G.NOCLIP or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.TeleportIsland or _G.Auto_EvoRace or _G.AutoFarmAllMsBypassType or _G.AutoObservationv2 or _G.AutoMusketeerHat or _G.AutoEctoplasm or _G.AutoRengoku or _G.Auto_Rainbow_Haki or _G.AutoObservation or _G.AutoDarkDagger or _G.Safe_Mode or _G.MasteryFruit or _G.AutoBudySword or _G.AutoAllBoss or _G.Auto_Bounty or _G.AutoSharkman or _G.Auto_Mastery_Fruit or _G.Auto_Mastery_Gun or _G.Auto_Dungeon or _G.Auto_Cavender or _G.Auto_Pole or _G.Auto_Kill_Ply or _G.Auto_Factory or _G.AutoSecondSea or _G.AutoBartilo or _G.Auto_DarkBoss or _G.AutoFarm or _G.Clip or _G.AutoElitehunter or _G.AutoThirdSea or _G.Auto_Bone == true then
                 pcall(function()
                     game:GetService("ReplicatedStorage").Remotes.CommE:FireServer("Ken",true)
                 end)
@@ -3537,11 +3513,7 @@ end)
     Main:AddLabelLeft("Wecome To Auti Hub Script")
     Date = os.date("%d".." ".."%B".." ".."%Y")
     Main:AddLabelLeft("Day : "..Date)
-    
-
-
-
-Main:AddLineLeft("")
+   Main:AddLineLeft("")
 
 FM = Main:AddLabelLeft("")
         
@@ -3733,7 +3705,7 @@ function DamageAura()
 				debug.setupvalue(ac.attack, 4, AcAttack7)
 				debug.setupvalue(ac.attack, 7, AcAttack10)
 				for k, v in pairs(ac.animator.anims.basic) do
-					v:Play(0.01,0.01,0.01,0.05,1,0.2,2,5,7,9,0.1,4)
+					v:Play(0.01,0.01,0.01,0.05,1,0.2,4)
 				end                 
 				if game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") and ac.blades and ac.blades[1] then 
 					game:GetService("ReplicatedStorage").RigControllerEvent:FireServer("weaponChange",tostring(CurrentWeapon()))
@@ -3768,7 +3740,7 @@ function AttackFunction()
 				debug.setupvalue(ac.attack, 4, AcAttack7)
 				debug.setupvalue(ac.attack, 7, AcAttack10)
 				for k, v in pairs(ac.animator.anims.basic) do
-					v:Play(0.01,0.01,0.01,0.05,0.1,1,2,0.02,5,7,0,3,0.1)
+					v:Play(0.01,0.01,0.01,0.05,0.1,1,2,0.02)
 				end                 
 				if game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") and ac.blades and ac.blades[1] then 
 					game:GetService("ReplicatedStorage").RigControllerEvent:FireServer("weaponChange",tostring(CurrentWeapon()))
@@ -3783,7 +3755,7 @@ end
 task.spawn(function()
     pcall(function()
     while task.wait(0.01) do
-        if _G.FastAttack then
+        if FastAttack then
             AttackFunction()
            end
         end
@@ -4657,11 +4629,20 @@ end)
     Main:AddSeperatorRight("Player")
 	
 	
+
 Main:AddToggleRight("Aim Bot Skill And Gun Fov Fully",false,function(a)
 	AimBotFullFunction = a
 end)
 
+Main:AddToggleRight("Show Fov",false,function(a)
+	ShowFov = a
+end)
 
+_G.FOVSize = 200
+
+Main:AddSliderRight("Fov Size",1,700,_G.FOVSize,nil,function(v)
+	_G.FOVSize = v
+end)
 
 local FOVCircle = Drawing.new("Circle")
 FOVCircle.Thickness = 2
@@ -4865,48 +4846,12 @@ end)
     
     Main:AddSeperatorRight("Aimbot")
      
-    spawn(function()
-        while wait() do
-            pcall(function()
-                local MaxDistance = math.huge
-                for i,v in pairs(game:GetService("Players"):GetPlayers()) do
-                    if v.Name ~= game:GetService("Players").LocalPlayer.Name then
-                        local Distance = v:DistanceFromCharacter(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position)
-                        if Distance < MaxDistance then
-                            MaxDistance = Distance
-                            PlayerSelectAimbot = v.Name
-                        end
-                    end
-                end
-            end)
-        end
-    end)
+
     
     Main:AddToggleRight("Aimbot Gun",_G.Aimbot_Gun,function(value)
         _G.Aimbot_Gun = value
     end)
  
-local lp = game:GetService('Players').LocalPlayer
-local mouse = lp:GetMouse()
-spawn(function()
-	while wait() do
-		if _G.Aimbot_Skill then
-			pcall(function()
-				local MaxDist, Closest = math.huge
-				for i,v in pairs(game:GetService("Players"):GetChildren()) do 
-					local Head = v.Character:FindFirstChild("HumanoidRootPart")
-					local Pos, Vis = game.Workspace.CurrentCamera.WorldToScreenPoint(game.Workspace.CurrentCamera, Head.Position)
-					local MousePos, TheirPos = Vector2.new(mouse.X, mouse.Y), Vector2.new(Pos.X, Pos.Y)
-					local Dist = (TheirPos - MousePos).Magnitude
-					if Dist < MaxDist and v.Name ~= game.Players.LocalPlayer.Name then
-						MaxDist = Dist
-						_G.CharacterAimBot = v
-					end
-				end
-			end)
-		end
-	end
-end)
  
 spawn(function()
     local gg = getrawmetatable(game)
@@ -4919,7 +4864,7 @@ spawn(function()
             if tostring(args[1]) == "RemoteEvent" then
                 if tostring(args[2]) ~= "true" and tostring(args[2]) ~= "false" then
                     if _G.Aimbot_Skill then
-                        args[2] = _G.CharacterAimBot.Character.HumanoidRootPart.Position
+                        args[2] = game:GetService("Players"):FindFirstChild(PlayerSelectAimbot).Character.HumanoidRootPart.Position
                         return old(unpack(args))
                     end
                 end
@@ -5106,6 +5051,23 @@ end)
             end)
         end
     end)
+    
+     spawn(function()
+            while wait() do
+                if _G.AutoFarmBounty then
+                    if not _G.NotEquip then
+                        pcall(function()
+                            for i,v in ipairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+                                if v:IsA("Tool") then
+                                    game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+                                end
+                            end
+                        end)
+                    end
+                end
+            end
+        end)
+    
     CastlePostoMansion = CFrame.new(-5084.8447265625, 316.48101806641, -3145.3752441406)
     MansiontoCastlePos = CFrame.new(-12464.596679688, 376.30590820312, -7567.2626953125)
     Castletophydra = CFrame.new(-5095.33984375, 316.48101806641, -3168.3134765625)
@@ -5119,13 +5081,13 @@ end)
                             if v:WaitForChild("Humanoid").Health > 0 and (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v.HumanoidRootPart.Position).Magnitude <= 17000 then
                                 plyselecthunthelpold = v.Humanoid.Health
                                 repeat task.wait()
-                                    EquipWeapon(_G.SelectWeapon)
+                                    _G.NotEquip = false
                                     NameTarget = v.Name
                                     if tostring(game.Players.LocalPlayer.Team) == "Pirates" then
-                                        topos(v.HumanoidRootPart.CFrame * CFrame.new(0,2,-20))
+                                        topos(v.HumanoidRootPart.CFrame * CFrame.new(10,10,0))
                                     elseif tostring(game.Players.LocalPlayer.Team) == "Marines" then
                                         if game.Players[NameTarget].Team ~= game.Players.LocalPlayer.Team then
-                                            topos(v.HumanoidRootPart.CFrame * CFrame.new(0,2,-20))
+                                            topos(v.HumanoidRootPart.CFrame * CFrame.new(10,10,0))
                                         end
                                     end
                                     spawn(function()
@@ -5137,17 +5099,14 @@ end)
                                     spawn(function()
                                         pcall(function()
                                         if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 50 then
-                                            game:service('VirtualInputManager'):SendKeyEvent(true, "Z", false, game)
-            					     game:GetService("VirtualInputManager"):SendKeyEvent(false,"Z",false,game)
-                						 wait(.01)
-										 game:GetService("VirtualInputManager"):SendKeyEvent(true,"X",false,game)
-											 game:GetService("VirtualInputManager"):SendKeyEvent(false,"X",false,game)
-										 wait(.01)
+                                            game:service('VirtualInputManager'):SendKeyEvent(true, "V", false, game)
+            					     game:GetService("VirtualInputManager"):SendKeyEvent(false,"V",false,game)
 										 game:GetService("VirtualInputManager"):SendKeyEvent(true,"C",false,game)
-				 							game:GetService("VirtualInputManager"):SendKeyEvent(false,"C",false,game)
-													 wait(.01)
-												 game:GetService("VirtualInputManager"):SendKeyEvent(true,"V",false,game)
-										 game:GetService("VirtualInputManager"):SendKeyEvent(false,"V",false,game)
+											 game:GetService("VirtualInputManager"):SendKeyEvent(false,"C",false,game)
+										 game:GetService("VirtualInputManager"):SendKeyEvent(true,"X",false,game)
+				 							game:GetService("VirtualInputManager"):SendKeyEvent(false,"X",false,game)
+												 game:GetService("VirtualInputManager"):SendKeyEvent(true,"Z",false,game)
+										 game:GetService("VirtualInputManager"):SendKeyEvent(false,"Z",false,game)
 										 end
                                         end)
                                     end)
@@ -6194,6 +6153,23 @@ Main:AddToggleLeft("Auto Farm",_G.AutoFarm,function(value)
     
     Main:AddToggleLeft("TP To Advanced Fruit Dealer",_G.AutoMysticIsland1,function(value)
             _G.AutoMysticIsland1 = value
+            repeat toTarget(CFrame.new(game:GetService("Workspace").Map.MysticIsland.npcspawn:GetChildren()[18].Position)) wait() until game:GetService("Workspace").NPCs["Advanced Fruit Dealer"].Hair.Handle
+repeat toTarget(CFrame.new(game:GetService("Workspace").Map.MysticIsland.npcspawn.npcSpawn.Position)) wait() until game:GetService("Workspace").NPCs["Advanced Fruit Dealer"].Hair.Handle
+repeat toTarget(CFrame.new(game:GetService("Workspace").Map.MysticIsland.npcspawn:GetChildren()[9].Position)) wait() until  game:GetService("Workspace").NPCs["Advanced Fruit Dealer"].Hair.Handle
+repeat toTarget(CFrame.new(game:GetService("Workspace").Map.MysticIsland.npcspawn:GetChildren()[2].Position)) wait() until  game:GetService("Workspace").NPCs["Advanced Fruit Dealer"].Hair.Handle
+repeat toTarget(CFrame.new(game:GetService("Workspace").Map.MysticIsland.npcspawn:GetChildren()[15].Position)) wait() until   game:GetService("Workspace").NPCs["Advanced Fruit Dealer"].Hair.Handle
+repeat toTarget(CFrame.new(game:GetService("Workspace").Map.MysticIsland.npcspawn:GetChildren()[16].Position)) wait() until game:GetService("Workspace").NPCs["Advanced Fruit Dealer"].Hair.Handle
+repeat toTarget(CFrame.new(game:GetService("Workspace").Map.MysticIsland.npcspawn:GetChildren()[14].Position)) wait() until game:GetService("Workspace").NPCs["Advanced Fruit Dealer"].Hair.Handle
+repeat toTarget(CFrame.new(game:GetService("Workspace").Map.MysticIsland.npcspawn:GetChildren()[13].Position)) wait() until game:GetService("Workspace").NPCs["Advanced Fruit Dealer"].Hair.Handle
+repeat toTarget(CFrame.new(game:GetService("Workspace").Map.MysticIsland.npcspawn:GetChildren()[12].Position)) wait() until game:GetService("Workspace").NPCs["Advanced Fruit Dealer"].Hair.Handle
+repeat toTarget(CFrame.new(game:GetService("Workspace").Map.MysticIsland.npcspawn:GetChildren()[11].Position)) wait() until game:GetService("Workspace").NPCs["Advanced Fruit Dealer"].Hair.Handle
+repeat toTarget(CFrame.new(game:GetService("Workspace").Map.MysticIsland.npcspawn:GetChildren()[10].Position)) wait() until game:GetService("Workspace").NPCs["Advanced Fruit Dealer"].Hair.Handle
+repeat toTarget(CFrame.new(game:GetService("Workspace").Map.MysticIsland.npcspawn:GetChildren()[17].Position)) wait() until game:GetService("Workspace").NPCs["Advanced Fruit Dealer"].Hair.Handle
+repeat toTarget(CFrame.new(game:GetService("Workspace").Map.MysticIsland.npcspawn:GetChildren()[8].Position)) wait() until game:GetService("Workspace").NPCs["Advanced Fruit Dealer"].Hair.Handle
+repeat toTarget(CFrame.new(game:GetService("Workspace").Map.MysticIsland.npcspawn:GetChildren()[5].Position)) wait() until game:GetService("Workspace").NPCs["Advanced Fruit Dealer"].Hair.Handle
+repeat toTarget(CFrame.new(game:GetService("Workspace").Map.MysticIsland.npcspawn:GetChildren()[4].Position)) wait() until game:GetService("Workspace").NPCs["Advanced Fruit Dealer"].Hair.Handle
+repeat toTarget(CFrame.new(game:GetService("Workspace").Map.MysticIsland.npcspawn:GetChildren()[3].Position)) wait() until game:GetService("Workspace").NPCs["Advanced Fruit Dealer"].Hair.Handle
+
         end)
     
      spawn(function()
@@ -6208,7 +6184,7 @@ Main:AddToggleLeft("Auto Farm",_G.AutoFarm,function(value)
     
         Main:AddToggleLeft("TP To Mystic Islnd",_G.AutoMysticIsland,function(value)
             _G.AutoMysticIsland = value
-        end)
+                    end)
     
         spawn(function()
             while wait() do
@@ -6260,7 +6236,7 @@ spawn(function()
                             if v.Name == "FragChest" or v.Name == "DiamondChest" then
                                 repeat wait()
                                   Goto(v.Position)
-                                until not v or _G.Chest == false
+                                until not v or _G.Chest == false or not v.Parent
                      end
                         end
                     else
@@ -6277,15 +6253,15 @@ spawn(function()
             _G.AutoMysticIsland2 = value
             StopTween()
             if _G.AutoMysticIsland2 == true then
-            repeat topostp(CFrame.new(2185.516845703125, 5.371269226074219, -6283.82958984375)) wait() until (game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(2185.516845703125, 5.371269226074219, -6283.82958984375)).Magnitude <= 10
+             topos(CFrame.new(2185.516845703125, 5.371269226074219, -6283.82958984375))
+             if (CFrame.new(2185.516845703125, 5.371269226074219, -6283.82958984375)) then
             local args = {
              [1] = "BuyBoat",
             [2] = "MarineBrigade"
              }
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))
             game:GetService("Workspace").Boats.MarineBrigade.VehicleSeat.MaxSpeed = 300
-            if _G.AutoMysticIsland2 == false then
-                topostp(CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame))
+            
             end
             end
         end)
@@ -6306,40 +6282,11 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF
     end
       
        
-       Main:AddToggleLeft("Auto Find Mystic Island [beta]",_G.AutoMysticIsland2,function(value)
+       Main:AddToggleLeft("Auto Find Mystic Island [beta]",_G.AutoMysticIsland21,function(value)
             _G.AutoMysticIsland21 = value
             StopTween()               
         end)
      
-     spawn(function()
-            while wait() do
-                if _G.AutoMysticIsland21 then
-                    pcall(function()
-      if _G.AutoMysticIsland21 == true then
-            repeat topostp(CFrame.new(2185.516845703125, 5.371269226074219, -6283.82958984375)) wait() until (game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(2185.516845703125, 5.371269226074219, -6283.82958984375)).Magnitude <= 1
-            local args = {
-             [1] = "BuyBoat",
-            [2] = "MarineBrigade"
-             }
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))
-            game:GetService("Workspace").Boats.MarineBrigade.VehicleSeat.MaxSpeed = 300
-repeat topostp(CFrame.new(-264.757721, 0.995281279, -7800.38379, -0.725104153, 2.70828764e-08, 0.688639224, 3.92595787e-08, 1, 2.01035122e-09, -0.688639224, 2.84933996e-08, -0.725104153)) wait()
-until (game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(-264.757721, 0.995281279, -7800.38379, -0.725104153, 2.70828764e-08, 0.688639224, 3.92595787e-08, 1, 2.01035122e-09, -0.688639224, 2.84933996e-08, -0.725104153)).Magnitude <= 10
-          game:GetService("Workspace").Boats.MarineBrigade.VehicleSeat.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-          repeat game:GetService("Workspace").Boats.MarineBrigade.VehicleSeat.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame wait(.1)
-until (game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(-264.757721, 0.995281279, -7800.38379, -0.725104153, 2.70828764e-08, 0.688639224, 3.92595787e-08, 1, 2.01035122e-09, -0.688639224, 2.84933996e-08, -0.725104153)).Magnitude <= 10
-          if (game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(-264.757721, 0.995281279, -7800.38379, -0.725104153, 2.70828764e-08, 0.688639224, 3.92595787e-08, 1, 2.01035122e-09, -0.688639224, 2.84933996e-08, -0.725104153)).Magnitude >= 10 then
-          topos(CFrame.new(-264.757721, 0.995281279, -7800.38379, -0.725104153, 2.70828764e-08, 0.688639224, 3.92595787e-08, 1, 2.01035122e-09, -0.688639224, 2.84933996e-08, -0.725104153))
-          
-          if _G.AutoMysticIsland21 == false then
-                topostp(CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame))
-            end
-            end
-            end
-            end)
-        end
-        end
-    end)
       
     spawn(function()
             while wait() do
@@ -6378,10 +6325,10 @@ end)
 						for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
 							if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 and (v.HumanoidRootPart.Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= _G.DistanceAura then
 								repeat wait()
-									StartMagnet = true
 									AutoHaki()
 									EquipWeapon(_G.SelectWeapon)
 									PosMon = v.HumanoidRootPart.CFrame
+									topos(v.HumanoidRootPart.CFrame * CFrame.new(0,45,0))
 									game:GetService'VirtualUser':CaptureController()
 									game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
 									v.HumanoidRootPart.Size = Vector3.new(60,60,60)
@@ -6389,12 +6336,7 @@ end)
 									v.Humanoid.JumpPower = 0
 									v.Humanoid.WalkSpeed = 0
 									v.HumanoidRootPart.CanCollide = false
-									v.Humanoid:ChangeState(11)
-									topos(v.HumanoidRootPart.CFrame * CFrame.new(0,45,0))
-									MagnetMobAura = true
 								until not  _G.MobAura or not v.Parent or v.Humanoid.Health <= 0
-								MagnetMobAura = false
-								StartMagnet = false
 							end
 						end
 					end
@@ -8153,6 +8095,7 @@ end)
                                         topos(v.HumanoidRootPart.CFrame * CFrame.new(0,-45,-40))
                                         game:GetService("VirtualUser"):CaptureController()
                                         game:GetService("VirtualUser"):Button1Down(Vector2.new(1280,672))
+                                     sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius",math.huge)
                                     until not _G.AutoDoughtBoss or not v.Parent or v.Humanoid.Health <= 0
                                 end
                             end
@@ -8234,131 +8177,290 @@ end)
 	return 0
 end
     
+    function toTargetP(CFgo)
+	if game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Health <= 0 or not game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid") then tween:Cancel() repeat wait() until game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid") and game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid").Health > 0 wait(7) return end
+	if (game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart.Position - CFgo.Position).Magnitude <= 150 then
+		pcall(function()
+			tween:Cancel()
+
+			game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart.CFrame = CFgo
+
+			return
+		end)
+	end
+	local tween_s = game:service"TweenService"
+	local info = TweenInfo.new((game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart.Position - CFgo.Position).Magnitude/325, Enum.EasingStyle.Linear)
+	tween = tween_s:Create(game.Players.LocalPlayer.Character["HumanoidRootPart"], info, {CFrame = CFgo})
+	tween:Play()
+
+	local tweenfunc = {}
+
+	function tweenfunc:Stop()
+		tween:Cancel()
+	end
+
+	return tweenfunc
+end
+    
     Main:AddToggleLeft("Auto Dough V2 [Beta]",nil,function(a)
-    _G.Auto_Open_Dough_Dungeon = a
-    StopTween()
+_G.dv2 = a
+_G.Settings.Main["Auto Dough V2"] = a
+StopTween()
     end)
 
-   
-		spawn(function()
-		while wait() do
-			if _G.Auto_Open_Dough_Dungeon then
-				pcall(function()
-					if game.Players.LocalPlayer.Backpack:FindFirstChild("God's Chalice") or game.Players.LocalPlayer.Character:FindFirstChild("God's Chalice") then
-						if string.find(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SweetChaliceNpc"),"Where") then
-							warn("Not Have Enough Material")
-						else
-							game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SweetChaliceNpc")
-						end
-					elseif game.Players.LocalPlayer.Backpack:FindFirstChild("Sweet Chalice") or game.Players.LocalPlayer.Character:FindFirstChild("Sweet Chalice") then
-						if string.find(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),"Do you want to open the portal now?") then
-							game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")
-						else
-							if game.Workspace.Enemies:FindFirstChild("Baking Staff [Lv. 2250]") or game.Workspace.Enemies:FindFirstChild("Head Baker [Lv. 2275]") or game.Workspace.Enemies:FindFirstChild("Cake Guard [Lv. 2225]") or game.Workspace.Enemies:FindFirstChild("Cookie Crafter [Lv. 2200]")  then
-								for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do  
-									if (v.Name == "Baking Staff [Lv. 2250]" or v.Name == "Head Baker [Lv. 2275]" or v.Name == "Cake Guard [Lv. 2225]" or v.Name == "Cookie Crafter [Lv. 2200]") and v.Humanoid.Health > 0 then
-										repeat wait()
-											AutoHaki()
-											EquipWeapon(_G.SelectWeapon)
-											StartCakeMagnet = true
-											v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)  
-											v.Humanoid.WalkSpeed = 0
-											POSCAKE = v.HumanoidRootPart.CFrame
-											TP(v.HumanoidRootPart.CFrame * CFrame.new(0,35,0))
-											game:GetService'VirtualUser':CaptureController()
-											game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
-										until _G.Auto_Open_Dough_Dungeon == false or game:GetService("ReplicatedStorage"):FindFirstChild("Cake Prince [Lv. 2300] [Raid Boss]") or not v.Parent or v.Humanoid.Health <= 0
-									end
-								end
-							else
-								StartCakeMagnet = false
-								TP(CFrame.new(-1820.0634765625, 210.74781799316406, -12297.49609375))
-							end
-						end						
-					elseif game.ReplicatedStorage:FindFirstChild("Dough King [Lv. 2300] [Raid Boss]") or game:GetService("Workspace").Enemies:FindFirstChild("Dough King [Lv. 2300] [Raid Boss]") then
-						if game:GetService("Workspace").Enemies:FindFirstChild("Dough King [Lv. 2300] [Raid Boss]") then
-							for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do 
-								if v.Name == "Dough King [Lv. 2300] [Raid Boss]" then
-									repeat wait()
-										AutoHaki()
-										EquipWeapon(_G.SelectWeapon)
-										v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
-										v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
-										TP(v.HumanoidRootPart.CFrame * CFrame.new(0,35,0))
-										game:GetService'VirtualUser':CaptureController()
-										game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
-									until _G.Auto_Open_Dough_Dungeon == false or not v.Parent or v.Humanoid.Health <= 0
-								end    
-							end    
-						else
-							TP(CFrame.new(-2009.2802734375, 4532.97216796875, -14937.3076171875)) 
-						end
-					elseif game.Players.LocalPlayer.Backpack:FindFirstChild("Red Key") or game.Players.LocalPlayer.Character:FindFirstChild("Red Key") then
-						local args = {
-							[1] = "CakeScientist",
-							[2] = "Check"
-						}
+spawn(function()
+				while wait() do
+					if _G.Settings.Main["Auto Dough V2"] then
+					    pcall(function()
+						if not game:GetService("Workspace").Map.CakeLoaf:FindFirstChild("RedDoor") then
+							if game.Players.LocalPlayer.Character:FindFirstChild("Red Key") or game.Players.LocalPlayer.Backpack:FindFirstChild("Red Key") then
+								local args = {
+									[1] = "CakeScientist",
+									[2] = "Check"
+								}
 
-						game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-					else
-						if game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible == true then
-							if string.find(game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text,"Diablo") or string.find(game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text,"Deandre") or string.find(game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text,"Urban") then
-								if game:GetService("Workspace").Enemies:FindFirstChild("Diablo [Lv. 1750]") or game:GetService("Workspace").Enemies:FindFirstChild("Deandre [Lv. 1750]") or game:GetService("Workspace").Enemies:FindFirstChild("Urban [Lv. 1750]") then
-									for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-										if v.Name == "Diablo [Lv. 1750]" or v.Name == "Deandre [Lv. 1750]" or v.Name == "Urban [Lv. 1750]" then
-											if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
-												repeat wait()
-													AutoHaki()
-													EquipWeapon(_G.SelectWeapon)
-													v.HumanoidRootPart.CanCollide = false
-													v.Humanoid.WalkSpeed = 0
-													v.HumanoidRootPart.Size = Vector3.new(80,80,80)
-													TP(v.HumanoidRootPart.CFrame * CFrame.new(0,35,0))
-													game:GetService("VirtualUser"):CaptureController()
-													game:GetService("VirtualUser"):Button1Down(Vector2.new(1280,672))
-													sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius",math.huge)
-												until _G.Auto_Open_Dough_Dungeon == false or v.Humanoid.Health <= 0 or not v.Parent or game.Players.LocalPlayer.Backpack:FindFirstChild("God's Chalice") or game.Players.LocalPlayer.Character:FindFirstChild("God's Chalice")
-											end
+								game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))    
+								local args = {
+									[1] = "RaidsNpc",
+									[2] = "Check"
+								}
+
+								game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))                        
+							end
+						elseif game:GetService("Workspace").Map.CakeLoaf:FindFirstChild("RedDoor") then
+							if game.Players.LocalPlayer.Character:FindFirstChild("Red Key") or game.Players.LocalPlayer.Backpack:FindFirstChild("Red Key") then
+								RedDorTween = toTargetP(CFrame.new(-2681.97998, 64.3921585, -12853.7363, 0.149007782, -1.87902192e-08, 0.98883605, 3.60619588e-08, 1, 1.35681812e-08, -0.98883605, 3.36376011e-08, 0.149007782))
+								if (CFrame.new(-2681.97998, 64.3921585, -12853.7363, 0.149007782, -1.87902192e-08, 0.98883605, 3.60619588e-08, 1, 1.35681812e-08, -0.98883605, 3.36376011e-08, 0.149007782).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 5 then
+									if RedDorTween then RedDorTween:Stop() end
+									game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2681.97998, 64.3921585, -12853.7363, 0.149007782, -1.87902192e-08, 0.98883605, 3.60619588e-08, 1, 1.35681812e-08, -0.98883605, 3.36376011e-08, 0.149007782)
+									wait(0.5)
+									EquipWeapon("Red Key")
+									wait(0.5)
+								end
+							elseif game.Workspace:FindFirstChild("Enemies"):FindFirstChild("Dough King [Lv. 2300] [Raid Boss]") or game:GetService("ReplicatedStorage"):FindFirstChild("Dough King [Lv. 2300] [Raid Boss]") then
+								if game:GetService("Workspace").Enemies:FindFirstChild("Dough King [Lv. 2300] [Raid Boss]") then
+									for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
+										if _G.Settings.Main["Auto Dough V2"] and v.Name == "Dough King [Lv. 2300] [Raid Boss]" and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
+											repeat wait()
+												if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude > 300 then
+													Farmtween = toTarget(v.HumanoidRootPart.CFrame)
+												elseif (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 300 then
+													if Farmtween then
+														Farmtween:Stop()
+													end
+EquipWeapon(_G.SelectWeapon)
+v.HumanoidRootPart.Size = Vector3.new(55,55,55)
+													FastAttack = true
+													game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0, 30, 0)
+												end
+											until not _G.Settings.Main["Auto Dough V2"] or not v.Parent or v.Humanoid.Health <= 0 or game:GetService("ReplicatedStorage"):FindFirstChild("Dough King [Lv. 2300] [Raid Boss]")
+											FastAttack = false
 										end
 									end
 								else
-									if game:GetService("ReplicatedStorage"):FindFirstChild("Diablo [Lv. 1750]") then
-										TP(game:GetService("ReplicatedStorage"):FindFirstChild("Diablo [Lv. 1750]").HumanoidRootPart.CFrame * CFrame.new(0,35,0))
-									elseif game:GetService("ReplicatedStorage"):FindFirstChild("Deandre [Lv. 1750]") then
-										TP(game:GetService("ReplicatedStorage"):FindFirstChild("Deandre [Lv. 1750]").HumanoidRootPart.CFrame * CFrame.new(0,35,0))
-									elseif game:GetService("ReplicatedStorage"):FindFirstChild("Urban [Lv. 1750]") then
-										TP(game:GetService("ReplicatedStorage"):FindFirstChild("Urban [Lv. 1750]").HumanoidRootPart.CFrame * CFrame.new(0,35,0))
+									if game:GetService("Workspace").Map.CakeLoaf.BigMirror.Other.Transparency == 0 then
+										FastAttack = false
+										Questtween = toTargetP(CFrame.new(-2151.82153, 149.315704, -12404.9053))
+										if (CFrame.new(-2151.82153, 149.315704, -12404.9053).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 300 then
+											if Questtween then Questtween:Stop() end
+											game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2151.82153, 149.315704, -12404.9053)
+											wait(1)
+										end
+									end 
+								end
+							elseif game.Players.LocalPlayer.Character:FindFirstChild("Sweet Chalice") or game.Players.LocalPlayer.Backpack:FindFirstChild("Sweet Chalice") then
+								--if string.find(tostring(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner", true)),"already") then
+
+								--else
+								game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner", true)
+								game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")
+								if game:GetService("Workspace").Enemies:FindFirstChild("Cookie Crafter [Lv. 2200]") or game:GetService("Workspace").Enemies:FindFirstChild("Cake Guard [Lv. 2225]") or game:GetService("Workspace").Enemies:FindFirstChild("Baking Staff [Lv. 2250]") or game:GetService("Workspace").Enemies:FindFirstChild("Head Baker [Lv. 2275]") then
+									for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
+										if _G.Settings.Main["Auto Dough V2"] and (v.Name == "Cookie Crafter [Lv. 2200]" or v.Name == "Cake Guard [Lv. 2225]" or v.Name == "Baking Staff [Lv. 2250]" or v.Name == "Head Baker [Lv. 2275]") and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
+											repeat wait()
+												if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude > 300 then
+													Farmtween = toTarget(v.HumanoidRootPart.CFrame)
+												elseif (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 300 then
+													if Farmtween then Farmtween:Stop() end
+													FastAttack = true
+													PosFarmCakePrince = v.HumanoidRootPart.CFrame
+												EquipWeapon(_G.SelectWeapon)
+													game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0, 30, 0)
+													MagnetFarmCakePrince = true
+													game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner", true)
+													game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")
+												end
+											until not _G.Settings.Main["Auto Dough V2"] or not v.Parent or v.Humanoid.Health <= 0
+											FastAttack = false
+											MagnetFarmCakePrince = false
+										end
 									end
-								end                    
+								else
+									MagnetFarmCakePrince = false
+									FastAttack = false
+									Questtween = toTarget(CFrame.new(-2077, 252, -12373))
+									if (CFrame.new(-2077, 252, -12373).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 300 then
+										if Questtween then Questtween:Stop() end
+										game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2077, 252, -12373)
+									end
+								end
+
+								--end
+							elseif (game.Players.LocalPlayer.Backpack:FindFirstChild("God's Chalice") or game.Players.LocalPlayer.Character:FindFirstChild("God's Chalice")) and GetMaterial("Conjured Cocoa") >= 10 then
+								game.ReplicatedStorage.Remotes.CommF_:InvokeServer("SweetChaliceNpc")
+								wait(0.2)
+							elseif not game.Players.LocalPlayer.Backpack:FindFirstChild("God's Chalice") and not game.Players.LocalPlayer.Character:FindFirstChild("God's Chalice") and (game.Workspace.Enemies:FindFirstChild("Deandre [Lv. 1750]") or game.Workspace.Enemies:FindFirstChild("Urban [Lv. 1750]") or game.Workspace.Enemies:FindFirstChild("Diablo [Lv. 1750]") or game.ReplicatedStorage:FindFirstChild("Deandre [Lv. 1750]") or game.ReplicatedStorage:FindFirstChild("Urban [Lv. 1750]") or game.ReplicatedStorage:FindFirstChild("Diablo [Lv. 1750]")) then
+								if game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == true then
+									if string.find(game.Players.LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, "Diablo") or string.find(game.Players.LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, "Urban") or string.find(game.Players.LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, "Deandre") then
+										for i,v in pairs(game:GetService("ReplicatedStorage"):GetChildren()) do
+											if string.find(v.Name,"Diablo") then
+												DoughTween = toTarget(v.HumanoidRootPart.CFrame)
+												if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 150 then
+													if DoughTween then
+														DoughTween:Stop()
+													end
+													game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame
+												end
+											end	
+											if string.find(v.Name,"Urban") then
+												DoughTween = toTarget(v.HumanoidRootPart.CFrame)
+												if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 150 then
+													if DoughTween then
+														DoughTween:Stop()
+													end
+													game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame
+												end
+											end	
+											if string.find(v.Name,"Deandre") then
+												DoughTween = toTarget(v.HumanoidRootPart.CFrame)
+												if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 150 then
+													if DoughTween then
+														DoughTween:Stop()
+													end
+													game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame
+												end
+											end	
+										end
+										for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
+											if _G.Settings.Main["Auto Dough V2"] and string.find(v.Name,"Diablo") and v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+												repeat wait()
+													if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude > 300 then
+														Farmtween = toTarget(v.HumanoidRootPart.CFrame)
+													elseif (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 300 then
+														if Farmtween then
+															Farmtween:Stop()
+														end
+													EquipWeapon(_G.SelectWeapon)
+														FastAttack = true
+														game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0, 30, 0)
+													end 
+												until not _G.Settings.Main["Auto Dough V2"] or not v.Parent or v.Humanoid.Health <= 0
+												FastAttack = false
+											end
+											if _G.Settings.Main["Auto Dough V2"] and string.find(v.Name,"Urban") and v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+												repeat wait()
+													if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude > 300 then
+														Farmtween = toTarget(v.HumanoidRootPart.CFrame)
+													elseif (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 300 then
+														if Farmtween then
+															Farmtween:Stop()
+														end
+													EquipWeapon(_G.SelectWeapon)
+														FastAttack = true
+														game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0, 30, 0)
+													end 
+												until not _G.Settings.Main["Auto Dough V2"] or not v.Parent or v.Humanoid.Health <= 0
+												FastAttack = false
+											end
+											if _G.Settings.Main["Auto Dough V2"] and string.find(v.Name,"Deandre") and v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+												repeat wait()
+													if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude > 300 then
+														Farmtween = toTarget(v.HumanoidRootPart.CFrame)
+													elseif (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 300 then
+														if Farmtween then
+															Farmtween:Stop()
+														end
+														EquipWeapon(_G.SelectWeapon)
+														FastAttack = true
+														game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0, 30, 0)
+													end 
+												until not _G.Settings.Main["Auto Dough V2"] or not v.Parent or v.Humanoid.Health <= 0
+												FastAttack = false
+											end
+										end
+									else
+										local string_1 = "EliteHunter";
+										local Target = game:GetService("ReplicatedStorage").Remotes["CommF_"];
+										Target:InvokeServer(string_1);
+									end
+								else
+									local string_1 = "EliteHunter";
+									local Target = game:GetService("ReplicatedStorage").Remotes["CommF_"];
+									Target:InvokeServer(string_1);
+								end
+							else
+								if game:GetService("Workspace").Enemies:FindFirstChild("Candy Rebel [Lv. 2375]") or game:GetService("Workspace").Enemies:FindFirstChild("Sweet Thief [Lv. 2350]") or game:GetService("Workspace").Enemies:FindFirstChild("Chocolate Bar Battler [Lv. 2325]") or game:GetService("Workspace").Enemies:FindFirstChild("Cocoa Warrior [Lv. 2300]") then
+									for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
+										if _G.Settings.Main["Auto Dough V2"] and (v.Name == "Candy Rebel [Lv. 2375]" or v.Name == "Sweet Thief [Lv. 2350]" or v.Name == "Chocolate Bar Battler [Lv. 2325]" or v.Name == "Cocoa Warrior [Lv. 2300]") and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
+											repeat wait()
+												-- if game.Players.LocalPlayer:DistanceFromCharacter(v.HumanoidRootPart.Position) > 3500 then
+												--     if Questtween then Questtween:Stop() end
+												--     if game.Players.LocalPlayer.Character:WaitForChild("Humanoid"):GetState() == Enum.HumanoidStateType.Dead then return end
+												--     ResetSetSpawn(v.HumanoidRootPart.CFrame)
+												-- else
+												if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude > 150 then
+													Farmtween = toTarget(v.HumanoidRootPart.CFrame)
+													FastAttack = false
+												elseif (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 150 then
+													if Farmtween then Farmtween:Stop() end
+													FastAttack = true
+													PosFarmCoco = v.HumanoidRootPart.CFrame
+													EquipWeapon(_G.SelectWeapon)
+													game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0, 30, 0)
+													MagnetFarmCoco = true
+												end
+											until not _G.Settings.Main["Auto Dough V2"] or not v.Parent or v.Humanoid.Health <= 0
+											FastAttack = false
+											MagnetFarmCoco = false
+										end
+									end
+								else
+									MagnetFarmCoco = false
+									FastAttack = false
+									Questtween = toTarget(CFrame.new(620.6344604492188, 78.93644714355469, -12581.369140625))
+									if (CFrame.new(620.6344604492188, 78.93644714355469, -12581.369140625).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 150 then
+										if Questtween then
+											Questtween:Stop()
+										end
+										game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(620.6344604492188, 78.93644714355469, -12581.369140625)
+									end
+								end
+						end
 							end
-						else
-							wait(0.5)
-							game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("EliteHunter")
+						end)
+					end
+				end
+			end)
+
+	spawn(function()
+		while wait() do
+			if _G.dv2 then
+				if MagnetFarmCakePrince then
+					for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
+						if MagnetFarmCakePrince and _G.dv2 and (v.Name == "Cookie Crafter [Lv. 2200]" or v.Name == "Cake Guard [Lv. 2225]" or v.Name == "Baking Staff [Lv. 2250]" or v.Name == "Head Baker [Lv. 2275]") and v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 and (v.HumanoidRootPart.Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 350 then
+							if InMyNetWork(v.HumanoidRootPart) then
+								v.HumanoidRootPart.CFrame = PosFarmCakePrince
+								v.HumanoidRootPart.CanCollide = false
+								v.HumanoidRootPart.Size = Vector3.new(60,60,60)
+							end
 						end
 					end
-				end)
+				end
+			else
+				break
 			end
 		end
 	end)
-	
-	    spawn(function()
-        game:GetService("RunService").Heartbeat:Connect(function()
-            pcall(function()
-                for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-                    if _G.Auto_Open_Dough_Dungeon and StartCakeMagnet and (v.Name == "Cookie Crafter [Lv. 2200]" or v.Name == "Cake Guard [Lv. 2225]" or v.Name == "Baking Staff [Lv. 2250]" or v.Name == "Head Baker [Lv. 2275]") and (v.HumanoidRootPart.Position - POSCAKE.Position).magnitude <= 350 then
-                        v.HumanoidRootPart.CFrame = POSCAKE
-                        v.HumanoidRootPart.CanCollide = false
-                        v.HumanoidRootPart.Size = Vector3.new(80,80,80)
-                        if v.Humanoid:FindFirstChild("Animator") then
-                            v.Humanoid.Animator:Destroy()
-                        end
-                        sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius",  math.huge)
-                    end
-                end
-            end)
-        end)
-    end)
 
 
 		
