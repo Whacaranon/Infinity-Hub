@@ -6254,7 +6254,7 @@ spawn(function()
             StopTween()
             if _G.AutoMysticIsland2 == true then
              topos(CFrame.new(2185.516845703125, 5.371269226074219, -6283.82958984375))
-             if (CFrame.new(2185.516845703125, 5.371269226074219, -6283.82958984375)) then
+             if (CFrame.new(2185.516845703125, 5.371269226074219, -6283.82958984375) - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 30 then
             local args = {
              [1] = "BuyBoat",
             [2] = "MarineBrigade"
