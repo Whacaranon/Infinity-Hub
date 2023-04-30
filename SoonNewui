@@ -1,3 +1,26 @@
+_G.JoinTeam = "Pirate"
+
+if game:GetService("Players").LocalPlayer.PlayerGui.Main:FindFirstChild("ChooseTeam") then
+	repeat wait()
+		if game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Main").ChooseTeam.Visible == true then
+			if _G.JoinTeam == "Pirate" then
+				for i, v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton.Activated)) do                                                                                                
+					v.Function()
+				end
+			elseif _G.JoinTeam == "Marine" then
+				for i, v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Marines.Frame.ViewportFrame.TextButton.Activated)) do                                                                                                
+					v.Function()
+				end
+			else
+				for i, v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton.Activated)) do                                                                                                
+					v.Function()
+				end
+			end
+		end
+	until game.Players.LocalPlayer.Team ~= nil and game:IsLoaded()
+end
+
+if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7449423635 then
 local ZenHub = Instance.new("ScreenGui")
 local Open = Instance.new("TextButton")
 local fuckshit = Instance.new("UICorner")
@@ -1783,692 +1806,422 @@ return dropfunc1
 end
 
 
+function main:AddSliderLeft(text,min,max,set,callback)
+				local Slider = Instance.new("Frame")
+				local slidercorner = Instance.new("UICorner")
+				local sliderr = Instance.new("Frame")
+				local sliderrcorner = Instance.new("UICorner")
+				local SliderLabel = Instance.new("TextLabel")
+				local HAHA = Instance.new("Frame")
+				local AHEHE = Instance.new("TextButton")
+				local bar = Instance.new("Frame")
+				local bar1 = Instance.new("Frame")
+				local bar1corner = Instance.new("UICorner")
+				local barcorner = Instance.new("UICorner")
+				local circlebar = Instance.new("Frame")
+				local UICorner = Instance.new("UICorner")
+				local slidervalue = Instance.new("Frame")
+				local valuecorner = Instance.new("UICorner")
+				local TextBox = Instance.new("TextBox")
+				local UICorner_2 = Instance.new("UICorner")
+	
+				Slider.Name = "Slider"
+				Slider.Parent = MainFramePage
+				Slider.BackgroundColor3 = _G.Color
+				Slider.BackgroundTransparency = 0
+				Slider.Size = UDim2.new(0, 280, 0, 51)
+	
+				slidercorner.CornerRadius = UDim.new(0, 5)
+				slidercorner.Name = "slidercorner"
+				slidercorner.Parent = Slider
+	
+				sliderr.Name = "sliderr"
+				sliderr.Parent = Slider
+				sliderr.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+				sliderr.Position = UDim2.new(0, 1, 0, 1)
+				sliderr.Size = UDim2.new(0, 278, 0, 49)
+	
+				sliderrcorner.CornerRadius = UDim.new(0, 5)
+				sliderrcorner.Name = "sliderrcorner"
+				sliderrcorner.Parent = sliderr
+	
+				SliderLabel.Name = "SliderLabel"
+				SliderLabel.Parent = sliderr
+				SliderLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+				SliderLabel.BackgroundTransparency = 1.000
+				SliderLabel.Position = UDim2.new(0, 15, 0, 0)
+				SliderLabel.Size = UDim2.new(0, 100, 0, 26)
+				SliderLabel.Font = Enum.Font.Code
+				SliderLabel.Text = text
+				SliderLabel.TextColor3 = Color3.fromRGB(225, 225, 225)
+				SliderLabel.TextSize = 16.000
+				SliderLabel.TextTransparency = 0
+				SliderLabel.TextXAlignment = Enum.TextXAlignment.Left
+	
+				HAHA.Name = "HAHA"
+				HAHA.Parent = sliderr
+				HAHA.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+				HAHA.BackgroundTransparency = 1.000
+				HAHA.Size = UDim2.new(0, 468, 0, 29)
+	
+				AHEHE.Name = "AHEHE"
+				AHEHE.Parent = sliderr
+				AHEHE.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+				AHEHE.BackgroundTransparency = 1.000
+				AHEHE.Position = UDim2.new(0, 10, 0, 35)
+				AHEHE.Size = UDim2.new(0, 260, 0, 5)
+				AHEHE.Font = Enum.Font.Code
+				AHEHE.Text = ""
+				AHEHE.TextColor3 = Color3.fromRGB(0, 0, 0)
+				AHEHE.TextSize = 14.000
+	
+				bar.Name = "bar"
+				bar.Parent = AHEHE
+				bar.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+				bar.Size = UDim2.new(0, 260, 0, 5)
+	
+				bar1.Name = "bar1"
+				bar1.Parent = bar
+				bar1.BackgroundColor3 = _G.Color
+				bar1.BackgroundTransparency = 0
+				bar1.Size = UDim2.new(set/max, 0, 0, 5)
+	
+				bar1corner.CornerRadius = UDim.new(0, 5)
+				bar1corner.Name = "bar1corner"
+				bar1corner.Parent = bar1
+	
+				barcorner.CornerRadius = UDim.new(0, 5)
+				barcorner.Name = "barcorner"
+				barcorner.Parent = bar
+	
+				circlebar.Name = "circlebar"
+				circlebar.Parent = bar1
+				circlebar.BackgroundColor3 = Color3.fromRGB(225, 225, 225)
+				circlebar.Position = UDim2.new(1, -2, 0, -3)
+				circlebar.Size = UDim2.new(0, 10, 0, 10)
+	
+				UICorner.CornerRadius = UDim.new(0, 100)
+				UICorner.Parent = circlebar
+	
+				slidervalue.Name = "slidervalue"
+				slidervalue.Parent = sliderr
+				slidervalue.BackgroundColor3 = _G.Color
+				slidervalue.BackgroundTransparency = 0
+				slidervalue.Position = UDim2.new(0, 220, 0, 5)
+				slidervalue.Size = UDim2.new(0, 50, 0, 15)
+	
+				valuecorner.CornerRadius = UDim.new(0, 5)
+				valuecorner.Name = "valuecorner"
+				valuecorner.Parent = slidervalue
+	
+				TextBox.Parent = slidervalue
+				TextBox.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+				TextBox.Position = UDim2.new(0, 1, 0, 1)
+				TextBox.Size = UDim2.new(0, 48, 0, 13)
+				TextBox.Font = Enum.Font.Code
+				TextBox.TextColor3 = Color3.fromRGB(225, 225, 225)
+				TextBox.TextSize = 9.000
+				TextBox.Text = set
+				TextBox.TextTransparency = 0
+	
+				UICorner_2.CornerRadius = UDim.new(0, 5)
+				UICorner_2.Parent = TextBox
+	
+				local mouse = game.Players.LocalPlayer:GetMouse()
+				local uis = game:GetService("UserInputService")
+	
+				if Value == nil then
+					Value = set
+					pcall(function()
+						callback(Value)
+					end)
+				end
+				
+				AHEHE.MouseButton1Down:Connect(function()
+					Value = math.floor((((tonumber(max) - tonumber(min)) / 260) * bar1.AbsoluteSize.X) + tonumber(min)) or 0
+					pcall(function()
+						callback(Value)
+					end)
+					TweenService:Create(
+						bar1,
+						TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+						{Size = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X, 0, 260), 0, 5)} -- UDim2.new(0, 128, 0, 25)
+					):Play()
+					--bar1.Size = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X, 0, 448), 0, 5)
+					TweenService:Create(
+						circlebar,
+						TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+						{Position =  UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X - 2, 0, 260), 0, -3)} -- UDim2.new(0, 128, 0, 25)
+					):Play()
+					--circlebar.Position = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X - 2, 0, 438), 0, -3)
+					moveconnection = mouse.Move:Connect(function()
+						TextBox.Text = Value
+						Value = math.floor((((tonumber(max) - tonumber(min)) / 260) * bar1.AbsoluteSize.X) + tonumber(min))
+						pcall(function()
+							callback(Value)
+						end)
+						TweenService:Create(
+							bar1,
+							TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+							{Size = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X, 0, 260), 0, 5)} -- UDim2.new(0, 128, 0, 25)
+						):Play()
+						--bar1.Size = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X, 0, 448), 0, 5)
+						TweenService:Create(
+							circlebar,
+							TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+							{Position =  UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X - 2, 0, 260), 0, -3)} -- UDim2.new(0, 128, 0, 25)
+						):Play()
+						--circlebar.Position = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X - 2, 0, 438), 0, -3)
+					end)
+					releaseconnection = uis.InputEnded:Connect(function(Mouse)
+						if Mouse.UserInputType == Enum.UserInputType.MouseButton1 then
+							Value = math.floor((((tonumber(max) - tonumber(min)) / 260) * bar1.AbsoluteSize.X) + tonumber(min))
+							pcall(function()
+								callback(Value)
+							end)
+							TweenService:Create(
+								bar1,
+								TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+								{Size = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X, 0, 260), 0, 5)} -- UDim2.new(0, 128, 0, 25)
+							):Play()
+							--bar1.Size = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X, 0, 448), 0, 5)
+							TweenService:Create(
+								circlebar,
+								TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+								{Position =  UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X - 2, 0, 260), 0, -3)} -- UDim2.new(0, 128, 0, 25)
+							):Play()
+							--circlebar.Position = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X - 2, 0, 438), 0, -3)
+							moveconnection:Disconnect()
+							releaseconnection:Disconnect()
+						end
+					end)
+				end)
+				releaseconnection = uis.InputEnded:Connect(function(Mouse)
+					if Mouse.UserInputType == Enum.UserInputType.MouseButton1 then
+						Value = math.floor((((tonumber(max) - tonumber(min)) / 260) * bar1.AbsoluteSize.X) + tonumber(min))
+						TextBox.Text = Value
+					end
+				end)
+	
+				TextBox.FocusLost:Connect(function()
+					if tonumber(TextBox.Text) > max then
+						TextBox.Text  = max
+					end
+					bar1.Size = UDim2.new((TextBox.Text or 0) / max, 0, 0, 5)
+					circlebar.Position = UDim2.new(1, -2, 0, -3)
+					TextBox.Text = tostring(TextBox.Text and math.floor( (TextBox.Text / max) * (max - min) + min) )
+					pcall(callback, TextBox.Text)
+				end)
+			end
 
-function main:AddSliderLeft(slidertitle, min, max, start, callback)
-local sliderfunc = {}
-local SliderFrame = Instance.new("Frame")
-local SliderFrame_2 = Instance.new("Frame")
-local UIStroke = Instance.new("UIStroke")
-local UICorner = Instance.new("UICorner")
-local ImageLabel = Instance.new("ImageLabel")
-local Space = Instance.new("TextLabel")
-local Title = Instance.new("TextLabel")
-local SliderInput = Instance.new("Frame")
-local SliderButton = Instance.new("Frame")
-local SliderCount = Instance.new("Frame")
-local SliderCorner = Instance.new("UICorner")
-local SliderCorner2 = Instance.new("UICorner")
-local BoxFrame = Instance.new("Frame")
-local SliderBox = Instance.new("TextBox")
-local SliderStroke = Instance.new("UIStroke")
-local Title_2 = Instance.new("TextButton")
-local UICorner_2 = Instance.new("UICorner")
-local UICorner_3 = Instance.new("UICorner")
+function main:AddSliderRight(text,min,max,set,callback)
+				local Slider = Instance.new("Frame")
+				local slidercorner = Instance.new("UICorner")
+				local sliderr = Instance.new("Frame")
+				local sliderrcorner = Instance.new("UICorner")
+				local SliderLabel = Instance.new("TextLabel")
+				local HAHA = Instance.new("Frame")
+				local AHEHE = Instance.new("TextButton")
+				local bar = Instance.new("Frame")
+				local bar1 = Instance.new("Frame")
+				local bar1corner = Instance.new("UICorner")
+				local barcorner = Instance.new("UICorner")
+				local circlebar = Instance.new("Frame")
+				local UICorner = Instance.new("UICorner")
+				local slidervalue = Instance.new("Frame")
+				local valuecorner = Instance.new("UICorner")
+				local TextBox = Instance.new("TextBox")
+				local UICorner_2 = Instance.new("UICorner")
+	
+				Slider.Name = "Slider"
+				Slider.Parent = MainFramePage2
+				Slider.BackgroundColor3 = _G.Color
+				Slider.BackgroundTransparency = 0
+				Slider.Size = UDim2.new(0, 280, 0, 51)
+	
+				slidercorner.CornerRadius = UDim.new(0, 5)
+				slidercorner.Name = "slidercorner"
+				slidercorner.Parent = Slider
+	
+				sliderr.Name = "sliderr"
+				sliderr.Parent = Slider
+				sliderr.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+				sliderr.Position = UDim2.new(0, 1, 0, 1)
+				sliderr.Size = UDim2.new(0, 278, 0, 49)
+	
+				sliderrcorner.CornerRadius = UDim.new(0, 5)
+				sliderrcorner.Name = "sliderrcorner"
+				sliderrcorner.Parent = sliderr
+	
+				SliderLabel.Name = "SliderLabel"
+				SliderLabel.Parent = sliderr
+				SliderLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+				SliderLabel.BackgroundTransparency = 1.000
+				SliderLabel.Position = UDim2.new(0, 15, 0, 0)
+				SliderLabel.Size = UDim2.new(0, 100, 0, 26)
+				SliderLabel.Font = Enum.Font.Code
+				SliderLabel.Text = text
+				SliderLabel.TextColor3 = Color3.fromRGB(225, 225, 225)
+				SliderLabel.TextSize = 16.000
+				SliderLabel.TextTransparency = 0
+				SliderLabel.TextXAlignment = Enum.TextXAlignment.Left
+	
+				HAHA.Name = "HAHA"
+				HAHA.Parent = sliderr
+				HAHA.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+				HAHA.BackgroundTransparency = 1.000
+				HAHA.Size = UDim2.new(0, 468, 0, 29)
+	
+				AHEHE.Name = "AHEHE"
+				AHEHE.Parent = sliderr
+				AHEHE.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+				AHEHE.BackgroundTransparency = 1.000
+				AHEHE.Position = UDim2.new(0, 10, 0, 35)
+				AHEHE.Size = UDim2.new(0, 260, 0, 5)
+				AHEHE.Font = Enum.Font.Code
+				AHEHE.Text = ""
+				AHEHE.TextColor3 = Color3.fromRGB(0, 0, 0)
+				AHEHE.TextSize = 14.000
+	
+				bar.Name = "bar"
+				bar.Parent = AHEHE
+				bar.BackgroundColor3 = Color3.fromRGB(45,45,45)
+				bar.Size = UDim2.new(0, 260, 0, 5)
+	
+				bar1.Name = "bar1"
+				bar1.Parent = bar
+				bar1.BackgroundColor3 = _G.Color
+				bar1.BackgroundTransparency = 0
+				bar1.Size = UDim2.new(set/max, 0, 0, 5)
+	
+				bar1corner.CornerRadius = UDim.new(0, 5)
+				bar1corner.Name = "bar1corner"
+				bar1corner.Parent = bar1
+	
+				barcorner.CornerRadius = UDim.new(0, 5)
+				barcorner.Name = "barcorner"
+				barcorner.Parent = bar
+	
+				circlebar.Name = "circlebar"
+				circlebar.Parent = bar1
+				circlebar.BackgroundColor3 = Color3.fromRGB(225, 225, 225)
+				circlebar.Position = UDim2.new(1, -2, 0, -3)
+				circlebar.Size = UDim2.new(0, 10, 0, 10)
+	
+				UICorner.CornerRadius = UDim.new(0, 100)
+				UICorner.Parent = circlebar
+	
+				slidervalue.Name = "slidervalue"
+				slidervalue.Parent = sliderr
+				slidervalue.BackgroundColor3 = _G.Color
+				slidervalue.BackgroundTransparency = 0
+				slidervalue.Position = UDim2.new(0, 220, 0, 5)
+				slidervalue.Size = UDim2.new(0, 50, 0, 15)
+	
+				valuecorner.CornerRadius = UDim.new(0, 5)
+				valuecorner.Name = "valuecorner"
+				valuecorner.Parent = slidervalue
+	
+				TextBox.Parent = slidervalue
+				TextBox.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+				TextBox.Position = UDim2.new(0, 1, 0, 1)
+				TextBox.Size = UDim2.new(0, 48, 0, 13)
+				TextBox.Font = Enum.Font.Code
+				TextBox.TextColor3 = Color3.fromRGB(225, 225, 225)
+				TextBox.TextSize = 9.000
+				TextBox.Text = set
+				TextBox.TextTransparency = 0
+	
+				UICorner_2.CornerRadius = UDim.new(0, 5)
+				UICorner_2.Parent = TextBox
+	
+				local mouse = game.Players.LocalPlayer:GetMouse()
+				local uis = game:GetService("UserInputService")
+	
+				if Value == nil then
+					Value = set
+					pcall(function()
+						callback(Value)
+					end)
+				end
+				
+				AHEHE.MouseButton1Down:Connect(function()
+					Value = math.floor((((tonumber(max) - tonumber(min)) / 260) * bar1.AbsoluteSize.X) + tonumber(min)) or 0
+					pcall(function()
+						callback(Value)
+					end)
+					TweenService:Create(
+						bar1,
+						TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+						{Size = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X, 0, 260), 0, 5)} -- UDim2.new(0, 128, 0, 25)
+					):Play()
+					--bar1.Size = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X, 0, 448), 0, 5)
+					TweenService:Create(
+						circlebar,
+						TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+						{Position =  UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X - 2, 0, 260), 0, -3)} -- UDim2.new(0, 128, 0, 25)
+					):Play()
+					--circlebar.Position = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X - 2, 0, 438), 0, -3)
+					moveconnection = mouse.Move:Connect(function()
+						TextBox.Text = Value
+						Value = math.floor((((tonumber(max) - tonumber(min)) / 260) * bar1.AbsoluteSize.X) + tonumber(min))
+						pcall(function()
+							callback(Value)
+						end)
+						TweenService:Create(
+							bar1,
+							TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+							{Size = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X, 0, 260), 0, 5)} -- UDim2.new(0, 128, 0, 25)
+						):Play()
+						--bar1.Size = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X, 0, 448), 0, 5)
+						TweenService:Create(
+							circlebar,
+							TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+							{Position =  UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X - 2, 0, 260), 0, -3)} -- UDim2.new(0, 128, 0, 25)
+						):Play()
+						--circlebar.Position = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X - 2, 0, 438), 0, -3)
+					end)
+					releaseconnection = uis.InputEnded:Connect(function(Mouse)
+						if Mouse.UserInputType == Enum.UserInputType.MouseButton1 then
+							Value = math.floor((((tonumber(max) - tonumber(min)) / 260) * bar1.AbsoluteSize.X) + tonumber(min))
+							pcall(function()
+								callback(Value)
+							end)
+							TweenService:Create(
+								bar1,
+								TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+								{Size = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X, 0, 260), 0, 5)} -- UDim2.new(0, 128, 0, 25)
+							):Play()
+							--bar1.Size = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X, 0, 448), 0, 5)
+							TweenService:Create(
+								circlebar,
+								TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+								{Position =  UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X - 2, 0, 260), 0, -3)} -- UDim2.new(0, 128, 0, 25)
+							):Play()
+							--circlebar.Position = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X - 2, 0, 438), 0, -3)
+							moveconnection:Disconnect()
+							releaseconnection:Disconnect()
+						end
+					end)
+				end)
+				releaseconnection = uis.InputEnded:Connect(function(Mouse)
+					if Mouse.UserInputType == Enum.UserInputType.MouseButton1 then
+						Value = math.floor((((tonumber(max) - tonumber(min)) / 260) * bar1.AbsoluteSize.X) + tonumber(min))
+						TextBox.Text = Value
+					end
+				end)
+	
+				TextBox.FocusLost:Connect(function()
+					if tonumber(TextBox.Text) > max then
+						TextBox.Text  = max
+					end
+					bar1.Size = UDim2.new((TextBox.Text or 0) / max, 0, 0, 5)
+					circlebar.Position = UDim2.new(1, -2, 0, -3)
+					TextBox.Text = tostring(TextBox.Text and math.floor( (TextBox.Text / max) * (max - min) + min) )
+					pcall(callback, TextBox.Text)
+				end)
+			end
 
--- Prop --
-SliderFrame.Name = slidertitle or "SliderFrame"
-SliderFrame.Parent = MainFramePage
-SliderFrame.BackgroundColor3 = Color3.fromRGB(51,255,255)
-SliderFrame.BackgroundTransparency = 1
-SliderFrame.BorderSizePixel = 0
-SliderFrame.Size = UDim2.new(0, 280, 0, 55)
-
-SliderFrame_2.Name = "SliderFrame_2"
-SliderFrame_2.Parent = SliderFrame
-SliderFrame_2.BackgroundColor3 = Color3.fromRGB(30,30,30)
-SliderFrame_2.BackgroundTransparency = 0
-SliderFrame_2.BorderSizePixel = 0
-SliderFrame_2.Position = UDim2.new(0, 0.5, 0, 0)
-SliderFrame_2.Size = UDim2.new(0, 278, 0, 55)
-
-UIStroke.Name = "UIStroke"
-UIStroke.Parent = SliderFrame_2
-UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-UIStroke.Color = Color3.fromRGB(51,255,255)
-UIStroke.LineJoinMode = Enum.LineJoinMode.Round
-UIStroke.Thickness = 1
-UIStroke.Transparency = 0
-UIStroke.Enabled = true
-UIStroke.Archivable = true
-
-UICorner.Parent = SliderFrame_2
-UICorner.CornerRadius = UDim.new(0, 3)
-
-ImageLabel.Name = "ImageLabel"
-ImageLabel.Parent = SliderFrame_2
-ImageLabel.BackgroundColor3 = Color3.fromRGB(51,255,255)
-ImageLabel.BackgroundTransparency = 1.000
-ImageLabel.BorderSizePixel = 0
-ImageLabel.Position = UDim2.new(0, 5, 0, 5)
-ImageLabel.Size = UDim2.new(0, 18, 0, 18)
-ImageLabel.Image = "rbxassetid://8825010231"
-ImageLabel.ImageColor3 = Color3.fromRGB(180,180,180)
-
-Space.Name = "Space"
-Space.Parent = SliderFrame_2
-Space.BackgroundColor3 = Color3.fromRGB(51,255,255)
-Space.BackgroundTransparency = 1.000
-Space.Position = UDim2.new(0, 30, 0, 0)
-Space.Size = UDim2.new(0, 15, 0, 30)
-Space.Font = Enum.Font.Code
-Space.Text = "|"
-Space.TextSize = 13.000
-Space.TextColor3 = Color3.fromRGB(180,180,180)
-Space.TextXAlignment = Enum.TextXAlignment.Center
-
-Title.Name = "Title"
-Title.Parent = SliderFrame_2
-Title.BackgroundColor3 = Color3.fromRGB(51,255,255)
-Title.BackgroundTransparency = 1.000
-Title.Position = UDim2.new(0, 50, 0, 0)
-Title.Size = UDim2.new(0, 278, 0, 30)
-Title.Font = Enum.Font.Code
-Title.Text = slidertitle or "Slider Title"
-Title.TextColor3 = Color3.fromRGB(180,180,180)
-Title.TextSize = 12.000
-Title.TextXAlignment = Enum.TextXAlignment.Left
-
-SliderInput.Name = "SliderInput"
-SliderInput.Parent = SliderFrame_2
-SliderInput.BackgroundColor3 = Color3.fromRGB(51,255,255)
-SliderInput.BackgroundTransparency = 0.7
-SliderInput.BorderSizePixel = 0
-SliderInput.Position = UDim2.new(0, 8, 0, 37)
-SliderInput.Size = UDim2.new(0, 260, 0, 4)
-
-SliderCorner2.CornerRadius = UDim.new(0, 100000)
-SliderCorner2.Parent = SliderInput
-
-SliderButton.Name = "SliderButton"
-SliderButton.Parent = SliderInput
-SliderButton.BackgroundColor3 = Color3.fromRGB(51,255,255)
-SliderButton.BackgroundTransparency = 1.000
-SliderButton.BorderSizePixel = 0
-SliderButton.Position = UDim2.new(0, 0, 0, -7)
-SliderButton.Size = UDim2.new(0, 278, 0, 25)
-
-SliderCount.Name = "SliderCount"
-SliderCount.Parent = SliderButton
-SliderCount.BackgroundColor3 = Color3.fromRGB(51,255,255)
-SliderCount.BackgroundTransparency = 0.3
-SliderCount.BorderSizePixel = 0
-SliderCount.Position = UDim2.new(0,start,0,0)
-SliderCount.Size = UDim2.new(0, 18, 0, 18)
- 
-Title_2.Name = "Title_2"
-Title_2.Parent = SliderButton
-Title_2.AnchorPoint = Vector2.new(0, 0)
-Title_2.BackgroundColor3 = Color3.fromRGB(255,0,0)
-Title_2.AutoButtonColor = false
-Title_2.BackgroundTransparency = 1.000
-Title_2.Position = UDim2.new(0,start,0,0)
-Title_2.Size = UDim2.new(0, 18, 0, 18)
-Title_2.Font = Enum.Font.Code
-Title_2.Text = tostring(start and math.floor((start / max) * (max - min) + min) or 0)
-Title_2.TextColor3 = Color3.fromRGB(51,255,255)
-Title_2.TextSize = 8.000
-Title_2.TextXAlignment = Enum.TextXAlignment.Center
-
-UICorner_2.Parent = Title_2
-UICorner_2.CornerRadius = UDim.new(0, 100000)
-
-SliderCorner.CornerRadius = UDim.new(0, 100000)
-SliderCorner.Parent = SliderCount
-
-SliderStroke.Name = "SliderStroke"
-SliderStroke.Parent = BoxFrame
-SliderStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-SliderStroke.Color = Color3.fromRGB(180,180,180)
-SliderStroke.LineJoinMode = Enum.LineJoinMode.Round
-SliderStroke.Thickness = 1
-SliderStroke.Transparency = 0.5
-SliderStroke.Enabled = true
-SliderStroke.Archivable = true
-
-BoxFrame.Name = "BoxFrame"
-BoxFrame.Parent = SliderFrame_2
-BoxFrame.BackgroundColor3 = Color3.fromRGB(51,255,255)
-BoxFrame.BackgroundTransparency = 1.000
-BoxFrame.Size = UDim2.new(0, 50, 0, 15)
-BoxFrame.Position = UDim2.new(0, 220, 0, 8)
-SliderBox.Name = "SliderBox"
-SliderBox.Parent = BoxFrame
-SliderBox.BackgroundColor3 = Color3.fromRGB(200, 0, 0)
-SliderBox.BackgroundTransparency = 1.000
-SliderBox.Position = UDim2.new(0, 0, 0, 1.80)
-SliderBox.Size = UDim2.new(0, 50, 0, 15)
-SliderBox.ClearTextOnFocus = false
-SliderBox.Font = Enum.Font.Code
-SliderBox.Text = tostring(start and math.floor((start / max) * (max - min) + min) or 0)
-SliderBox.TextColor3 = Color3.fromRGB(200,200,200)
-SliderBox.TextSize = 10.000
-SliderBox.TextTransparency = 0
-SliderBox.TextXAlignment = Enum.TextXAlignment.Center
-SliderBox.TextEditable = true
-
-UICorner_3.Parent = BoxFrame
-UICorner_3.CornerRadius = UDim.new(0, 2)
-
--- Slider Script --
-local dragging
-local SliderButtonStart
-local SliderButtonInput
-local slide = SliderButton
-
-local function slide(input)
- local slidein = UDim2.new(math.clamp((input.Position.X - SliderButton.AbsolutePosition.X) / SliderButton.AbsoluteSize.X, 0, 1), 0, 0, 0)
- SliderCount:TweenPosition(slidein, Enum.EasingDirection.InOut, Enum.EasingStyle.Linear, 0.08, true)
- Title_2:TweenPosition(slidein, Enum.EasingDirection.InOut, Enum.EasingStyle.Linear, 0.12, true)
- local Value = math.floor(((slidein.X.Scale * max) / max) * (max - min) + min)
- SliderBox.Text = tostring(Value)
- Title_2.Text = tostring(Value)
- pcall(callback, Value, slidein)
-end
-
-SliderButton.InputBegan:Connect(function(input)
- if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-dragging = true
-SliderButtonInput = input
-SliderButtonStart = input.Position.X
-slidein = SliderButton.AbsolutePosition.X
-game.TweenService:Create(SliderCount, TweenInfo.new(0.08, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {BackgroundTransparency = 0, Size = UDim2.new(0, 14, 0, 14)}):Play()
-game.TweenService:Create(Title_2, TweenInfo.new(0.12, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {AnchorPoint = Vector2.new(0.22, 0.8), TextSize = 13.000, BackgroundTransparency = 0, Size = UDim2.new(0, 20, 0, 25)}):Play()
-game.TweenService:Create(SliderBox, TweenInfo.new(0.08, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {TextTransparency = 0}):Play()
-game.TweenService:Create(SliderInput, TweenInfo.new(0.08, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {BackgroundTransparency = 0.5}):Play()
-game.TweenService:Create(SliderStroke, TweenInfo.new(0.08, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {Transparency = 0}):Play()
- end
- input.Changed:Connect(function(input)
-if input.UserInputType == Enum.UserInputState.End then
-dragging = false
-
-end
- end)
-end)
-SliderButton.InputEnded:Connect(function(input)
- if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-dragging = false
-SliderButtonInput = input
-game.TweenService:Create(SliderCount, TweenInfo.new(0.08, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {BackgroundTransparency = 0.3, Size = UDim2.new(0, 18, 0, 18)}):Play()
-game.TweenService:Create(Title_2, TweenInfo.new(0.12, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {AnchorPoint = Vector2.new(0, 0), TextSize = 8.000, BackgroundTransparency = 1.000, Size = UDim2.new(0, 18, 0, 18)}):Play()
-game.TweenService:Create(SliderBox, TweenInfo.new(0.08, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {TextTransparency = 0.5}):Play()
-game.TweenService:Create(SliderInput, TweenInfo.new(0.08, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {BackgroundTransparency = 0.7}):Play()
-game.TweenService:Create(SliderStroke, TweenInfo.new(0.08, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {Transparency = 0.5}):Play()
- end
-end)
-UserInputService.InputChanged:Connect(function(input)
- if input == SliderButtonInput and dragging then
-slide(input)
- end
-end)
-
-function set(property)
- if property == "Text" then
-if tonumber(SliderBox.Text) then 
-if tonumber(SliderBox.Text) <= max then
- Value = SliderBox.Text
- Title_2.Text = SliderBox.Text
- SliderCount:TweenPosition(UDim2.new(((tonumber(SliderBox.Text) or min) - min) / (max - min), 0, 0, 0), "InOut", "Linear", 0.05, true)
- Title_2:TweenPosition(UDim2.new(((tonumber(SliderBox.Text) or min) - min) / (max - min), 0, 0, 0), "InOut", "Linear", 0.8, true)
- pcall(function()
- callback(Value)
- end)
-end
-if tonumber(SliderBox.Text) > max then
- SliderBox.Text = max
- Title_2.Text = max
- Value = max
- SliderCount:TweenPosition(UDim2.new(((max or min) - min) / (max - min), 0, 0, 0), "InOut", "Linear", 0.08, true)
- Title_2:TweenPosition(UDim2.new(((max or min) - min) / (max - min), 0, 0, 0), "InOut", "Linear", 0.12, true)
- pcall(function()
- callback(Value)
- end)
-end
-if tonumber(SliderBox.Text) >= min then
- Value = SliderBox.Text
- Title_2.Text = SliderBox.Text
- SliderCount:TweenPosition(UDim2.new(((tonumber(SliderBox.Text) or min) - min) / (max - min), 0, 0, 0), "InOut", "Linear", 0.08, true)
- Title_2:TweenPosition(UDim2.new(((tonumber(SliderBox.Text) or min) - min) / (max - min), 0, 0, 0), "InOut", "Linear", 0.12, true)
- pcall(function()
- callback(Value)
- end)
-end
-if tonumber(SliderBox.Text) < min then
- Value = min
- Title_2 = min
- SliderCount.Position = UDim2.new(((min or min) - min) / (max - min), 0, 0, 0)
- Title_2.Position = UDim2.new(((min or min) - min) / (max - min), 0, 0, 0)
- pcall(function()
- callback(Value)
- end)
-end
-else
-SliderBox.Text = "" or Value
-Title_2.Text = Value
-end
- end
-end
-
-SliderBox.Focused:Connect(function()
- SliderBox.Changed:Connect(set)
-end)
-
-SliderBox.FocusLost:Connect(function(enterP)
- if not enterP then
-if SliderBox.Text == "" then
-SliderBox.Text = min
-Title_2.Text = min
-Value = min
-SliderCount:TweenPosition(UDim2.new(((min) - min) / (max - min), 0, 0, 0), "InOut", "Linear", 0.08, true)
-Title_2:TweenPosition(UDim2.new(((min) - min) / (max - min), 0, 0, 0), "InOut", "Linear", 0.12, true)
-pcall(function()
- callback(Value)
-end)
-end
-if tonumber(SliderBox.Text) > tonumber(max) then
-Value = max
-SliderBox.Text = max
-Title_2.Text = max
-SliderCount:TweenPosition(UDim2.new(((max or min) - min) / (max - min), 0, 0, 0), "InOut", "Linear", 0.08, true)
-Title_2:TweenPosition(UDim2.new(((max or min) - min) / (max - min), 0, 0, 0), "InOut", "Linear", 0.12, true)
-pcall(function()
- callback(Value)
-end)
-else
-Value = tonumber(SliderBox.Text)
-end
-if tonumber(SliderBox.Text) < min then
-SliderBox.Text = min
-Title_2.Text = min
-Value = min
-SliderCount:TweenPosition(UDim2.new(((min) - min) / (max - min), 0, 0, 0), "InOut", "Linear", 0.08, true)
-Title_2:TweenPosition(UDim2.new(((min) - min) / (max - min), 0, 0, 0), "InOut", "Linear", 0.12, true)
-pcall(function()
- callback(Value)
-end)
-else
-Value = tonumber(SliderBox.Text)
-end
- end
- if tonumber(SliderBox.Text) > max then
-SliderBox.Text = max
-Title_2.Text = max
-Value = max
-SliderCount:TweenPosition(UDim2.new(((max or min) - min) / (max - min), 0, 0, 0), "InOut", "Linear", 0.08, true)
-Title_2:TweenPosition(UDim2.new(((max or min) - min) / (max - min), 0, 0, 0), "InOut", "Linear", 0.12, true)
-pcall(function()
-callback(Value)
-end)
- else
-Value = tonumber(SliderBox.Text)
- end
- if tonumber(SliderBox.Text) < min then
-SliderBox.Text = min
-Title_2.Text = min
-Value = min
-SliderCount.Position = UDim2.new(((min) - min) / (max - min), 0, 0, 0)
-Title_2.Position = UDim2.new(((min) - min) / (max - min), 0, 0, 0)
-pcall(function()
-callback(Value)
-end)
- else
-Value = tonumber(SliderBox.Text)
- end
- if SliderBox.Text == "" then
-SliderBox.Text = min
-Title_2.Text = min
-Value = min
-SliderCount:TweenPosition(UDim2.new(((min) - min) / (max - min), 0, 0, 0), "InOut", "Linear", 0.08, true)
-Title_2:TweenPosition(UDim2.new(((min) - min) / (max - min), 0, 0, 0), "InOut", "Linear", 0.12, true)
-pcall(function()
-callback(Value)
-end)
- end
-end)
-return sliderfunc
-end
-
-function main:AddSliderRight(slidertitle, min, max, start, callback)
-local sliderfuncc = {}
-local SliderFramee = Instance.new("Frame")
-local SliderFrame_22 = Instance.new("Frame")
-local UIStrokee = Instance.new("UIStroke")
-local UICornerr = Instance.new("UICorner")
-local ImageLabell = Instance.new("ImageLabel")
-local Spacee = Instance.new("TextLabel")
-local Titlee = Instance.new("TextLabel")
-local SliderInputt = Instance.new("Frame")
-local SliderButtonn = Instance.new("Frame")
-local SliderCountt = Instance.new("Frame")
-local SliderCornerr = Instance.new("UICorner")
-local SliderCorner22 = Instance.new("UICorner")
-local BoxFramee = Instance.new("Frame")
-local SliderBoxx = Instance.new("TextBox")
-local SliderStrokee = Instance.new("UIStroke")
-local Title_22 = Instance.new("TextButton")
-local UICorner_22 = Instance.new("UICorner")
-local UICorner_33 = Instance.new("UICorner")
-
--- Prop --
-SliderFramee.Name = slidertitle or "SliderFrame"
-SliderFramee.Parent = MainFramePage2
-SliderFramee.BackgroundColor3 = Color3.fromRGB(51,255,255)
-SliderFramee.BackgroundTransparency = 1
-SliderFramee.BorderSizePixel = 0
-SliderFramee.Size = UDim2.new(0, 280, 0, 55)
-
-SliderFrame_22.Name = "SliderFrame_2"
-SliderFrame_22.Parent = SliderFramee
-SliderFrame_22.BackgroundColor3 = Color3.fromRGB(30,30,30)
-SliderFrame_22.BackgroundTransparency = 0
-SliderFrame_22.BorderSizePixel = 0
-SliderFrame_22.Position = UDim2.new(0, 0.5, 0, 0)
-SliderFrame_22.Size = UDim2.new(0, 278, 0, 55)
-
-UIStrokee.Name = "UIStroke"
-UIStrokee.Parent = SliderFrame_22
-UIStrokee.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-UIStrokee.Color = Color3.fromRGB(51,255,255)
-UIStrokee.LineJoinMode = Enum.LineJoinMode.Round
-UIStrokee.Thickness = 1
-UIStrokee.Transparency = 0
-UIStrokee.Enabled = true
-UIStrokee.Archivable = true
-
-UICornerr.Parent = SliderFrame_22
-UICornerr.CornerRadius = UDim.new(0, 3)
-
-ImageLabell.Name = "ImageLabel"
-ImageLabell.Parent = SliderFrame_22
-ImageLabell.BackgroundColor3 = Color3.fromRGB(51,255,255)
-ImageLabell.BackgroundTransparency = 1.000
-ImageLabell.BorderSizePixel = 0
-ImageLabell.Position = UDim2.new(0, 5, 0, 5)
-ImageLabell.Size = UDim2.new(0, 18, 0, 18)
-ImageLabell.Image = "rbxassetid://8825010231"
-ImageLabell.ImageColor3 = Color3.fromRGB(180,180,180)
-
-Spacee.Name = "Space"
-Spacee.Parent = SliderFrame_22
-Spacee.BackgroundColor3 = Color3.fromRGB(51,255,255)
-Spacee.BackgroundTransparency = 1.000
-Spacee.Position = UDim2.new(0, 30, 0, 0)
-Spacee.Size = UDim2.new(0, 15, 0, 30)
-Spacee.Font = Enum.Font.Code
-Spacee.Text = "|"
-Spacee.TextSize = 13.000
-Spacee.TextColor3 = Color3.fromRGB(180,180,180)
-Spacee.TextXAlignment = Enum.TextXAlignment.Center
-
-Titlee.Name = "Title"
-Titlee.Parent = SliderFrame_22
-Titlee.BackgroundColor3 = Color3.fromRGB(51,255,255)
-Titlee.BackgroundTransparency = 1.000
-Titlee.Position = UDim2.new(0, 50, 0, 0)
-Titlee.Size = UDim2.new(0, 260, 0, 30)
-Titlee.Font = Enum.Font.Code
-Titlee.Text = slidertitle or "Slider Title"
-Titlee.TextColor3 = Color3.fromRGB(180,180,180)
-Titlee.TextSize = 12.000
-Titlee.TextXAlignment = Enum.TextXAlignment.Left
-
-SliderInputt.Name = "SliderInput"
-SliderInputt.Parent = SliderFrame_22
-SliderInputt.BackgroundColor3 = Color3.fromRGB(51,255,255)
-SliderInputt.BackgroundTransparency = 0.7
-SliderInputt.BorderSizePixel = 0
-SliderInputt.Position = UDim2.new(0, 8, 0, 37)
-SliderInputt.Size = UDim2.new(0, 260, 0, 4)
-
-SliderCorner22.CornerRadius = UDim.new(0, 100000)
-SliderCorner22.Parent = SliderInputt
-
-SliderButtonn.Name = "SliderButton"
-SliderButtonn.Parent = SliderInputt
-SliderButtonn.BackgroundColor3 = Color3.fromRGB(51,255,255)
-SliderButtonn.BackgroundTransparency = 1.000
-SliderButtonn.BorderSizePixel = 0
-SliderButtonn.Position = UDim2.new(0, 0, 0, -7)
-SliderButtonn.Size = UDim2.new(0, 278, 0, 25)
-
-SliderCountt.Name = "SliderCount"
-SliderCountt.Parent = SliderButtonn
-SliderCountt.BackgroundColor3 = Color3.fromRGB(51,255,255)
-SliderCountt.BackgroundTransparency = 0.3
-SliderCountt.BorderSizePixel = 0
-SliderCountt.Position = UDim2.new(0,start,0,0)
-SliderCountt.Size = UDim2.new(0, 18, 0, 18)
- 
-Title_22.Name = "Title_2"
-Title_22.Parent = SliderButtonn
-Title_22.AnchorPoint = Vector2.new(0, 0)
-Title_22.BackgroundColor3 = Color3.fromRGB(255,0,0)
-Title_22.AutoButtonColor = false
-Title_22.BackgroundTransparency = 1.000
-Title_22.Position = UDim2.new(0,start,0,0)
-Title_22.Size = UDim2.new(0, 18, 0, 18)
-Title_22.Font = Enum.Font.Code
-Title_22.Text = tostring(start and math.floor((start / max) * (max - min) + min) or 0)
-Title_22.TextColor3 = Color3.fromRGB(51,255,255)
-Title_22.TextSize = 8.000
-Title_22.TextXAlignment = Enum.TextXAlignment.Center
-
-UICorner_22.Parent = Title_22
-UICorner_22.CornerRadius = UDim.new(0, 100000)
-
-SliderCornerr.CornerRadius = UDim.new(0, 100000)
-SliderCornerr.Parent = SliderCountt
-
-SliderStrokee.Name = "SliderStroke"
-SliderStrokee.Parent = BoxFramee
-SliderStrokee.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-SliderStrokee.Color = Color3.fromRGB(180,180,180)
-SliderStrokee.LineJoinMode = Enum.LineJoinMode.Round
-SliderStrokee.Thickness = 1
-SliderStrokee.Transparency = 0.5
-SliderStrokee.Enabled = true
-SliderStrokee.Archivable = true
-
-BoxFramee.Name = "BoxFrame"
-BoxFramee.Parent = SliderFrame_22
-BoxFramee.BackgroundColor3 = Color3.fromRGB(51,255,255)
-BoxFramee.BackgroundTransparency = 1.000
-BoxFramee.Size = UDim2.new(0, 50, 0, 15)
-BoxFramee.Position = UDim2.new(0, 220, 0, 8)
-SliderBoxx.Name = "SliderBox"
-SliderBoxx.Parent = BoxFramee
-SliderBoxx.BackgroundColor3 = Color3.fromRGB(200, 0, 0)
-SliderBoxx.BackgroundTransparency = 1.000
-SliderBoxx.Position = UDim2.new(0, 0, 0, 1.80)
-SliderBoxx.Size = UDim2.new(0, 50, 0, 15)
-SliderBoxx.ClearTextOnFocus = false
-SliderBoxx.Font = Enum.Font.Code
-SliderBoxx.Text = tostring(start and math.floor((start / max) * (max - min) + min) or 0)
-SliderBoxx.TextColor3 = Color3.fromRGB(200,200,200)
-SliderBoxx.TextSize = 10.000
-SliderBoxx.TextTransparency = 0
-SliderBoxx.TextXAlignment = Enum.TextXAlignment.Center
-SliderBoxx.TextEditable = true
-
-UICorner_33.Parent = BoxFramee
-UICorner_33.CornerRadius = UDim.new(0, 2)
-
--- Slider Script --
-local draggingg
-local SliderButtonStartt
-local SliderButtonInputt
-local slide = SliderButtonn
-
-local function slide(input)
- local slidein = UDim2.new(math.clamp((input.Position.X - SliderButtonn.AbsolutePosition.X) / SliderButtonn.AbsoluteSize.X, 0, 1), 0, 0, 0)
- SliderCountt:TweenPosition(slidein, Enum.EasingDirection.InOut, Enum.EasingStyle.Linear, 0.08, true)
- Title_22:TweenPosition(slidein, Enum.EasingDirection.InOut, Enum.EasingStyle.Linear, 0.12, true)
- local Value = math.floor(((slidein.X.Scale * max) / max) * (max - min) + min)
- SliderBoxx.Text = tostring(Value)
- Title_22.Text = tostring(Value)
- pcall(callback, Value, slidein)
-end
-
-SliderButtonn.InputBegan:Connect(function(input)
- if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-dragging = true
-SliderButtonInputt = input
-SliderButtonStartt = input.Position.X
-slidein = SliderButtonn.AbsolutePosition.X
-game.TweenService:Create(SliderCountt, TweenInfo.new(0.08, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {BackgroundTransparency = 0, Size = UDim2.new(0, 14, 0, 14)}):Play()
-game.TweenService:Create(Title_22, TweenInfo.new(0.12, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {AnchorPoint = Vector2.new(0.22, 0.8), TextSize = 13.000, BackgroundTransparency = 0, Size = UDim2.new(0, 20, 0, 25)}):Play()
-game.TweenService:Create(SliderBoxx, TweenInfo.new(0.08, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {TextTransparency = 0}):Play()
-game.TweenService:Create(SliderInputt, TweenInfo.new(0.08, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {BackgroundTransparency = 0.5}):Play()
-game.TweenService:Create(SliderStrokee, TweenInfo.new(0.08, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {Transparency = 0}):Play()
- end
- input.Changed:Connect(function(input)
-if input.UserInputType == Enum.UserInputState.End then
-dragging = false
-
-end
- end)
-end)
-SliderButtonn.InputEnded:Connect(function(input)
- if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-dragging = false
-SliderButtonInputt = input
-game.TweenService:Create(SliderCountt, TweenInfo.new(0.08, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {BackgroundTransparency = 0.3, Size = UDim2.new(0, 18, 0, 18)}):Play()
-game.TweenService:Create(Title_22, TweenInfo.new(0.12, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {AnchorPoint = Vector2.new(0, 0), TextSize = 8.000, BackgroundTransparency = 1.000, Size = UDim2.new(0, 18, 0, 18)}):Play()
-game.TweenService:Create(SliderBoxx, TweenInfo.new(0.08, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {TextTransparency = 0.5}):Play()
-game.TweenService:Create(SliderInputt, TweenInfo.new(0.08, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {BackgroundTransparency = 0.7}):Play()
-game.TweenService:Create(SliderStrokee, TweenInfo.new(0.08, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {Transparency = 0.5}):Play()
- end
-end)
-UserInputService.InputChanged:Connect(function(input)
- if input == SliderButtonInputt and dragging then
-slide(input)
- end
-end)
-
-function set(property)
- if property == "Text" then
-if tonumber(SliderBoxx.Text) then 
-if tonumber(SliderBoxx.Text) <= max then
- Value = SliderBoxx.Text
- Title_22.Text = SliderBoxx.Text
- SliderCountt:TweenPosition(UDim2.new(((tonumber(SliderBoxx.Text) or min) - min) / (max - min), 0, 0, 0), "InOut", "Linear", 0.05, true)
- Title_22:TweenPosition(UDim2.new(((tonumber(SliderBoxx.Text) or min) - min) / (max - min), 0, 0, 0), "InOut", "Linear", 0.8, true)
- pcall(function()
- callback(Value)
- end)
-end
-if tonumber(SliderBoxx.Text) > max then
- SliderBoxx.Text = max
- Title_22.Text = max
- Value = max
- SliderCountt:TweenPosition(UDim2.new(((max or min) - min) / (max - min), 0, 0, 0), "InOut", "Linear", 0.08, true)
- Title_22:TweenPosition(UDim2.new(((max or min) - min) / (max - min), 0, 0, 0), "InOut", "Linear", 0.12, true)
- pcall(function()
- callback(Value)
- end)
-end
-if tonumber(SliderBoxx.Text) >= min then
- Value = SliderBoxx.Text
- Title_22.Text = SliderBoxx.Text
- SliderCountt:TweenPosition(UDim2.new(((tonumber(SliderBoxx.Text) or min) - min) / (max - min), 0, 0, 0), "InOut", "Linear", 0.08, true)
- Title_22:TweenPosition(UDim2.new(((tonumber(SliderBoxx.Text) or min) - min) / (max - min), 0, 0, 0), "InOut", "Linear", 0.12, true)
- pcall(function()
- callback(Value)
- end)
-end
-if tonumber(SliderBoxx.Text) < min then
- Value = min
- Title_22 = min
- SliderCountt.Position = UDim2.new(((min or min) - min) / (max - min), 0, 0, 0)
- Title_22.Position = UDim2.new(((min or min) - min) / (max - min), 0, 0, 0)
- pcall(function()
- callback(Value)
- end)
-end
-else
-SliderBoxx.Text = "" or Value
-Title_22.Text = Value
-end
- end
-end
-
-SliderBoxx.Focused:Connect(function()
- SliderBoxx.Changed:Connect(set)
-end)
-
-SliderBoxx.FocusLost:Connect(function(enterP)
- if not enterP then
-if SliderBoxx.Text == "" then
-SliderBoxx.Text = min
-Title_22.Text = min
-Value = min
-SliderCountt:TweenPosition(UDim2.new(((min) - min) / (max - min), 0, 0, 0), "InOut", "Linear", 0.08, true)
-Title_22:TweenPosition(UDim2.new(((min) - min) / (max - min), 0, 0, 0), "InOut", "Linear", 0.12, true)
-pcall(function()
- callback(Value)
-end)
-end
-if tonumber(SliderBoxx.Text) > tonumber(max) then
-Value = max
-SliderBoxx.Text = max
-Title_22.Text = max
-SliderCountt:TweenPosition(UDim2.new(((max or min) - min) / (max - min), 0, 0, 0), "InOut", "Linear", 0.08, true)
-Title_22:TweenPosition(UDim2.new(((max or min) - min) / (max - min), 0, 0, 0), "InOut", "Linear", 0.12, true)
-pcall(function()
- callback(Value)
-end)
-else
-Value = tonumber(SliderBoxx.Text)
-end
-if tonumber(SliderBoxx.Text) < min then
-SliderBoxx.Text = min
-Title_22.Text = min
-Value = min
-SliderCountt:TweenPosition(UDim2.new(((min) - min) / (max - min), 0, 0, 0), "InOut", "Linear", 0.08, true)
-Title_22:TweenPosition(UDim2.new(((min) - min) / (max - min), 0, 0, 0), "InOut", "Linear", 0.12, true)
-pcall(function()
- callback(Value)
-end)
-else
-Value = tonumber(SliderBoxx.Text)
-end
- end
- if tonumber(SliderBoxx.Text) > max then
-SliderBoxx.Text = max
-Title_22.Text = max
-Value = max
-SliderCountt:TweenPosition(UDim2.new(((max or min) - min) / (max - min), 0, 0, 0), "InOut", "Linear", 0.08, true)
-Title_22:TweenPosition(UDim2.new(((max or min) - min) / (max - min), 0, 0, 0), "InOut", "Linear", 0.12, true)
-pcall(function()
-callback(Value)
-end)
- else
-Value = tonumber(SliderBoxx.Text)
- end
- if tonumber(SliderBoxx.Text) < min then
-SliderBoxx.Text = min
-Title_22.Text = min
-Value = min
-SliderCountt.Position = UDim2.new(((min) - min) / (max - min), 0, 0, 0)
-Title_22.Position = UDim2.new(((min) - min) / (max - min), 0, 0, 0)
-pcall(function()
-callback(Value)
-end)
- else
-Value = tonumber(SliderBoxx.Text)
- end
- if SliderBoxx.Text == "" then
-SliderBoxx.Text = min
-Title_22.Text = min
-Value = min
-SliderCountt:TweenPosition(UDim2.new(((min) - min) / (max - min), 0, 0, 0), "InOut", "Linear", 0.08, true)
-Title_22:TweenPosition(UDim2.new(((min) - min) / (max - min), 0, 0, 0), "InOut", "Linear", 0.12, true)
-pcall(function()
-callback(Value)
-end)
- end
-end)
-return sliderfuncc
-end
 
 
 		function main:AddTextboxLeft(text,texts,disappear,callback)
@@ -2832,7 +2585,6 @@ end
 	end
 	return uitab
 end
-
 
     function Hop()
         local PlaceID = game.PlaceId
@@ -3386,7 +3138,7 @@ function Goto(Pos)
     spawn(function()
         pcall(function()
             while wait() do
-                if _G.AutoFarmFruit or _G.dv2 or _G.AutoAdvanceDungeon or _G.egg  or _G.AutoLawBoss or _G.Auto_Open_Dough_Dungeon or _G.AutoMysticIsland21 or _G.AutoMysticIsland or _G.AutoMysticIsland2 or _G.Heats or _G.fts or _G.AutoDoughtBoss or _G.human or _G.ghoul or _G.Gear or _G.bot or _G.dv2 or _G.Candy or _G.Cocoa or _G.Ectoplasm or _G.AutoRedioactive or _G.Chest or _G.AutoSaw or _G.Sea1 or _G.Sea or _G.Magma or _G.Fish or _G.My or _G.God or _G.combo or _G.Auto_Bone2 or _G.AutoDoughtBoss or _G.Auto_DungeonMobAura or _G.AutoFarmChest or _G.AutoFarmBossHallow or _G.AutoFarmSwanGlasses or _G.AutoLongSword or _G.AutoBlackSpikeycoat or _G.AutoElectricClaw or _G.AutoFarmGunMastery or _G.AutoHolyTorch or _G.AutoLawRaid or _G.AutoFarmBoss or _G.AutoTwinHooks or _G.AutoOpenSwanDoor or _G.AutoDragon_Trident or _G.AutoSaber or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.TeleportIsland or _G.Auto_EvoRace or _G.AutoFarmAllMsBypassType or _G.AutoObservationv2 or _G.AutoMusketeerHat or _G.AutoEctoplasm or _G.AutoRengoku or _G.Auto_Rainbow_Haki or _G.AutoObservation or _G.AutoDarkDagger or _G.Safe_Mode or _G.MasteryFruit or _G.AutoBudySword or _G.AutoBounty or _G.AutoAllBoss or _G.Auto_Bounty or _G.AutoSharkman or _G.Auto_Mastery_Fruit or _G.Auto_Mastery_Gun or _G.Auto_Dungeon or _G.Auto_Cavender or _G.Auto_Pole or _G.Auto_Kill_Ply or _G.Auto_Factory or _G.AutoSecondSea or _G.TeleportPly or _G.AutoBartilo or _G.Auto_DarkBoss or _G.GrabChest or _G.AutoFarmBounty or _G.Holy_Torch or _G.AutoFarm or _G.Clip or FarmBoss or _G.AutoElitehunter or _G.AutoThirdSea or _G.Auto_Bone == true then
+                if _G.AutoFarmFruit or _G.Auto_Open_Dough_Dungeon or _G.AutoAdvanceDungeon or _G.egg  or _G.AutoLawBoss or _G.Auto_Open_Dough_Dungeon or _G.AutoMysticIsland21 or _G.AutoMysticIsland or _G.AutoMysticIsland2 or _G.Heats or _G.fts or _G.AutoDoughtBoss or _G.human or _G.ghoul or _G.Gear or _G.bot or _G.dv2 or _G.Candy or _G.Cocoa or _G.Ectoplasm or _G.AutoRedioactive or _G.Chest or _G.AutoSaw or _G.Sea1 or _G.Sea or _G.Magma or _G.Fish or _G.My or _G.God or _G.combo or _G.Auto_Bone2 or _G.AutoDoughtBoss or _G.Auto_DungeonMobAura or _G.AutoFarmChest or _G.AutoFarmBossHallow or _G.AutoFarmSwanGlasses or _G.AutoLongSword or _G.AutoBlackSpikeycoat or _G.AutoElectricClaw or _G.AutoFarmGunMastery or _G.AutoHolyTorch or _G.AutoLawRaid or _G.AutoFarmBoss or _G.AutoTwinHooks or _G.AutoOpenSwanDoor or _G.AutoDragon_Trident or _G.AutoSaber or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.TeleportIsland or _G.Auto_EvoRace or _G.AutoFarmAllMsBypassType or _G.AutoObservationv2 or _G.AutoMusketeerHat or _G.AutoEctoplasm or _G.AutoRengoku or _G.Auto_Rainbow_Haki or _G.AutoObservation or _G.AutoDarkDagger or _G.Safe_Mode or _G.MasteryFruit or _G.AutoBudySword or _G.AutoBounty or _G.AutoAllBoss or _G.Auto_Bounty or _G.AutoSharkman or _G.Auto_Mastery_Fruit or _G.Auto_Mastery_Gun or _G.Auto_Dungeon or _G.Auto_Cavender or _G.Auto_Pole or _G.Auto_Kill_Ply or _G.Auto_Factory or _G.AutoSecondSea or _G.TeleportPly or _G.AutoBartilo or _G.Auto_DarkBoss or _G.GrabChest or _G.AutoFarmBounty or _G.Holy_Torch or _G.AutoFarm or _G.Clip or FarmBoss or _G.AutoElitehunter or _G.AutoThirdSea or _G.Auto_Bone == true then
                     if not game:GetService("Players").LocalPlayer.Character.HumanoidRootPart:FindFirstChild("BodyClip") then
                         local Noclip = Instance.new("BodyVelocity")
                         Noclip.Name = "BodyClip"
@@ -3402,7 +3154,7 @@ function Goto(Pos)
     spawn(function()
         pcall(function()
             game:GetService("RunService").Stepped:Connect(function()
-                if _G.AutoAdvanceDungeon or _G.dv2 or _G.AutoFarmFruit or _G.egg or _G.Auto_Open_Dough_Dungeon or _G.AutoLawBoss or _G.AutoMysticIsland2 or _G.Heats or _G.fts or _G.AutoDoughtBoss or _G.human or _G.ghoul or _G.Gear or _G.bot or _G.dv2 or _G.Cocoa or _G.Candy or _G.Ectoplasm or _G.Chest1 or _G.AutoRedioactive or _G.AutoSaw or _G.Chest or _G.Sea1 or _G.Sea or _G.Magma or _G.Fish or _G.My or _G.God or _G.combo or _G.Auto_Bone2 or _G.AutoDoughtBoss or _G.Auto_DungeonMobAura or _G.AutoFarmChest or _G.AutoFarmBossHallow or _G.AutoFarmSwanGlasses or _G.AutoLongSword or _G.AutoBlackSpikeycoat or _G.AutoElectricClaw or _G.AutoFarmGunMastery or _G.AutoHolyTorch or _G.AutoLawRaid or _G.AutoFarmBoss or _G.AutoTwinHooks or _G.AutoOpenSwanDoor or _G.AutoDragon_Trident or _G.AutoSaber or _G.NOCLIP or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.TeleportIsland or _G.Auto_EvoRace or _G.AutoFarmAllMsBypassType or _G.AutoObservationv2 or _G.AutoMusketeerHat or _G.AutoEctoplasm or _G.AutoRengoku or _G.Auto_Rainbow_Haki or _G.AutoObservation or _G.AutoDarkDagger or _G.Safe_Mode or _G.MasteryFruit or _G.AutoBudySword or _G.AutoBounty or _G.AutoAllBoss or _G.Auto_Bounty or _G.AutoSharkman or _G.Auto_Mastery_Fruit or _G.Auto_Mastery_Gun or _G.Auto_Dungeon or _G.Auto_Cavender or _G.Auto_Pole or _G.Auto_Kill_Ply or _G.Auto_Factory or _G.AutoSecondSea or _G.TeleportPly or _G.AutoBartilo or _G.Auto_DarkBoss or _G.GrabChest or _G.AutoFarmBounty or _G.Holy_Torch or _G.AutoFarm or _G.Clip or _G.AutoElitehunter or _G.AutoThirdSea or _G.Auto_Bone == true then
+                if _G.AutoAdvanceDungeon or _G.Auto_Open_Dough_Dungeon or _G.AutoFarmFruit or _G.egg or _G.Auto_Open_Dough_Dungeon or _G.AutoLawBoss or _G.AutoMysticIsland2 or _G.Heats or _G.fts or _G.AutoDoughtBoss or _G.human or _G.ghoul or _G.Gear or _G.bot or _G.dv2 or _G.Cocoa or _G.Candy or _G.Ectoplasm or _G.Chest1 or _G.AutoRedioactive or _G.AutoSaw or _G.Chest or _G.Sea1 or _G.Sea or _G.Magma or _G.Fish or _G.My or _G.God or _G.combo or _G.Auto_Bone2 or _G.AutoDoughtBoss or _G.Auto_DungeonMobAura or _G.AutoFarmChest or _G.AutoFarmBossHallow or _G.AutoFarmSwanGlasses or _G.AutoLongSword or _G.AutoBlackSpikeycoat or _G.AutoElectricClaw or _G.AutoFarmGunMastery or _G.AutoHolyTorch or _G.AutoLawRaid or _G.AutoFarmBoss or _G.AutoTwinHooks or _G.AutoOpenSwanDoor or _G.AutoDragon_Trident or _G.AutoSaber or _G.NOCLIP or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.TeleportIsland or _G.Auto_EvoRace or _G.AutoFarmAllMsBypassType or _G.AutoObservationv2 or _G.AutoMusketeerHat or _G.AutoEctoplasm or _G.AutoRengoku or _G.Auto_Rainbow_Haki or _G.AutoObservation or _G.AutoDarkDagger or _G.Safe_Mode or _G.MasteryFruit or _G.AutoBudySword or _G.AutoBounty or _G.AutoAllBoss or _G.Auto_Bounty or _G.AutoSharkman or _G.Auto_Mastery_Fruit or _G.Auto_Mastery_Gun or _G.Auto_Dungeon or _G.Auto_Cavender or _G.Auto_Pole or _G.Auto_Kill_Ply or _G.Auto_Factory or _G.AutoSecondSea or _G.TeleportPly or _G.AutoBartilo or _G.Auto_DarkBoss or _G.GrabChest or _G.AutoFarmBounty or _G.Holy_Torch or _G.AutoFarm or _G.Clip or _G.AutoElitehunter or _G.AutoThirdSea or _G.Auto_Bone == true then
                     for _, v in pairs(game:GetService("Players").LocalPlayer.Character:GetDescendants()) do
                         if v:IsA("BasePart") then
                             v.CanCollide = false    
@@ -3415,7 +3167,7 @@ function Goto(Pos)
     
     spawn(function()
         while wait() do
-            if _G.AutoDoughtBoss or _G.AutoFarmFruit or _G.dv2 or _G.Heats or _G.Auto_Open_Dough_Dungeon or _G.AutoLawBoss or _G.human or _G.AutoDoughtBoss or _G.ghoul or _G.Candy or _G.Gear or _G.dv2 or _G.Cocoa or _G.Chest1 or _G.Ectoplasm or _G.AutoRedioactive or _G.AutoSaw or _G.Chest or _G.Sea1 or _G.Sea or _G.Magma or _G.Fish or _G.My or _G.God or _G.combo or _G.Auto_Bone2 or _G.Auto_DungeonMobAura or _G.AutoFarmChest or _G.AutoFarmBossHallow or _G.AutoFarmSwanGlasses or _G.AutoLongSword or _G.AutoBlackSpikeycoat or _G.AutoElectricClaw or _G.AutoFarmGunMastery or _G.AutoHolyTorch or _G.AutoLawRaid or _G.AutoFarmBoss or _G.AutoTwinHooks or _G.AutoOpenSwanDoor or _G.AutoDragon_Trident or _G.AutoSaber or _G.NOCLIP or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.TeleportIsland or _G.Auto_EvoRace or _G.AutoFarmAllMsBypassType or _G.AutoObservationv2 or _G.AutoMusketeerHat or _G.AutoEctoplasm or _G.AutoRengoku or _G.Auto_Rainbow_Haki or _G.AutoObservation or _G.AutoDarkDagger or _G.Safe_Mode or _G.MasteryFruit or _G.AutoBudySword or _G.AutoAllBoss or _G.Auto_Bounty or _G.AutoSharkman or _G.Auto_Mastery_Fruit or _G.Auto_Mastery_Gun or _G.Auto_Dungeon or _G.Auto_Cavender or _G.Auto_Pole or _G.Auto_Kill_Ply or _G.Auto_Factory or _G.AutoSecondSea or _G.AutoBartilo or _G.Auto_DarkBoss or _G.AutoFarm or _G.Clip or _G.AutoElitehunter or _G.AutoThirdSea or _G.Auto_Bone == true then
+            if _G.AutoDoughtBoss or _G.Auto_Open_Dough_Dungeon or _G.AutoFarmFruit or _G.dv2 or _G.Heats or _G.Auto_Open_Dough_Dungeon or _G.AutoLawBoss or _G.human or _G.AutoDoughtBoss or _G.ghoul or _G.Candy or _G.Gear or _G.dv2 or _G.Cocoa or _G.Chest1 or _G.Ectoplasm or _G.AutoRedioactive or _G.AutoSaw or _G.Chest or _G.Sea1 or _G.Sea or _G.Magma or _G.Fish or _G.My or _G.God or _G.combo or _G.Auto_Bone2 or _G.Auto_DungeonMobAura or _G.AutoFarmChest or _G.AutoFarmBossHallow or _G.AutoFarmSwanGlasses or _G.AutoLongSword or _G.AutoBlackSpikeycoat or _G.AutoElectricClaw or _G.AutoFarmGunMastery or _G.AutoHolyTorch or _G.AutoLawRaid or _G.AutoFarmBoss or _G.AutoTwinHooks or _G.AutoOpenSwanDoor or _G.AutoDragon_Trident or _G.AutoSaber or _G.NOCLIP or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.TeleportIsland or _G.Auto_EvoRace or _G.AutoFarmAllMsBypassType or _G.AutoObservationv2 or _G.AutoMusketeerHat or _G.AutoEctoplasm or _G.AutoRengoku or _G.Auto_Rainbow_Haki or _G.AutoObservation or _G.AutoDarkDagger or _G.Safe_Mode or _G.MasteryFruit or _G.AutoBudySword or _G.AutoAllBoss or _G.Auto_Bounty or _G.AutoSharkman or _G.Auto_Mastery_Fruit or _G.Auto_Mastery_Gun or _G.Auto_Dungeon or _G.Auto_Cavender or _G.Auto_Pole or _G.Auto_Kill_Ply or _G.Auto_Factory or _G.AutoSecondSea or _G.AutoBartilo or _G.Auto_DarkBoss or _G.AutoFarm or _G.Clip or _G.AutoElitehunter or _G.AutoThirdSea or _G.Auto_Bone == true then
                 pcall(function()
                     game:GetService("ReplicatedStorage").Remotes.CommE:FireServer("Ken",true)
                 end)
@@ -4630,7 +4382,7 @@ end)
 	
 	
 
-Main:AddToggleRight("Aim Bot Skill And Gun Fov Fully",false,function(a)
+Main:AddToggleRight("Aim Bot Skill {Beta}",false,function(a)
 	AimBotFullFunction = a
 end)
 
@@ -4639,8 +4391,7 @@ Main:AddToggleRight("Show Fov",false,function(a)
 end)
 
 _G.FOVSize = 200
-
-Main:AddSliderRight("Fov Size",1,700,_G.FOVSize,nil,function(v)
+Main:AddSliderRight("Fov Size",1,700,_G.FOVSize,function(v)
 	_G.FOVSize = v
 end)
 
@@ -4731,7 +4482,7 @@ spawn(function()
 			if AimBotFullFunction and game.Players.LocalPlayer.Character:FindFirstChild(SelectToolWeaponGun) and game:GetService("Players"):FindFirstChild(_G.CharacterAimBot.Name) then
 				tool = game:GetService("Players").LocalPlayer.Character[SelectToolWeaponGun]
 				v17 = workspace:FindPartOnRayWithIgnoreList(Ray.new(tool.Handle.CFrame.p, (game:GetService("Players"):FindFirstChild(_G.CharacterAimBot.Name).Character.HumanoidRootPart.Position - tool.Handle.CFrame.p).unit * 100), { game.Players.LocalPlayer.Character, workspace._WorldOrigin });
-				game:GetService("Players").LocalPlayer.Character[SelectToolWeaponGun].RemoteFunctionShoot:InvokeServer(game:GetService("Players"):FindFirstChild(_G.CharacterAimBot.Name).Character.HumanoidRootPart.Position, (require(game.ReplicatedStorage.Util).Other.hrpFromPart(v17)));
+				game:GetService("Players").LocalPlayer.Character[SelectToolWeaponGun].RemoteFunctionShoot:InvokeServer(game:GetService("Players"):FindFirstChild(_G.CharacterAimBot).Character.HumanoidRootPart.Position, (require(game.ReplicatedStorage.Util).Other.hrpFromPart(v17)));
 			end 
 		end
 	end)
@@ -6126,11 +5877,7 @@ Main:AddToggleLeft("Auto Farm",_G.AutoFarm,function(value)
     elseif World3 then
     
     
-    if game:GetService("Workspace").Map:FindFirstChild("MysticIsland") then
-                  Update:Nof("MysticIsland : 🟢",2)
-                  else
-                  Update:Nof("MysticIsland : 🔴",2)
-                  end
+   
 
 
     local ig = Main:AddLabelLeft("")
@@ -6279,7 +6026,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF
             end
         end
     end)
-    end
+  
       
        
        Main:AddToggleLeft("Auto Find Mystic Island [beta]",_G.AutoMysticIsland21,function(value)
@@ -6299,6 +6046,7 @@ end)
             end
         end
     end)
+      end
     
     
     
@@ -6720,11 +6468,11 @@ local BoneFarm = Main:AddToggleLeft("Farm Bone",_G.Auto_Bone2,function(value)
        Main:AddSeperatorLeft("Mastery")
     
      _G.Kill_At = 19
-    Main:AddSliderLeft("Kill At %",1,100,19,function(value)
+    Main:AddSliderLeft("Kill At %",1,100,_G.Kill_At,function(value)
         _G.Kill_At = value
     end)
     
-    Main:AddToggleLeft("Auto Farm BF Beta",_G.AutoFarmFruit,function(a)
+    Main:AddToggleLeft("Auto Farm BF Fast",_G.AutoFarmFruit,function(a)
     _G.AutoFarmFruit = a
             StopTween()
     if _G.AutoFarmFruit == false then
@@ -6936,7 +6684,7 @@ spawn(function()
                                         if v.Humanoid.Health <= HealthMs then
                                                     AutoHaki()
                                                     EquipWeapon(game:GetService("Players").LocalPlayer.Data.DevilFruit.Value)
-                                                    topos(v.HumanoidRootPart.CFrame * CFrame.new(0,40,0))
+                                                    topos(v.HumanoidRootPart.CFrame * CFrame.new(_G.Distance_X,_G.Distance_Y,_G.Distance_Z))
                                                     v.HumanoidRootPart.CanCollide = false
                                                     PosMonBone2 = v.HumanoidRootPart.CFrame
                                                     v.Humanoid.WalkSpeed = 0
@@ -6952,9 +6700,10 @@ spawn(function()
                                         StartMagnetBoneMon2 = true
                                         PosMonBone2 = v.HumanoidRootPart.CFrame
                                         topos(v.HumanoidRootPart.CFrame * CFrame.new(0,40,0))
-                                        end
                                         game:GetService("VirtualUser"):CaptureController()
                                         game:GetService("VirtualUser"):Button1Down(Vector2.new(1280,672))
+                                        end
+                                        
                                         
                                     until not _G.AutoFarmFruit or not v.Parent or v.Humanoid.Health <= 0
                                 end
@@ -7014,7 +6763,7 @@ spawn(function()
                                                 if v.Humanoid.Health <= HealthMs then
                                                     AutoHaki()
                                                     EquipWeapon(game:GetService("Players").LocalPlayer.Data.DevilFruit.Value)
-                                                    topos(v.HumanoidRootPart.CFrame * CFrame.new(0,20,0))
+                                                    topos(v.HumanoidRootPart.CFrame * CFrame.new(_G.Distance_X,_G.Distance_Y,_G.Distance_Z))
                                                     v.HumanoidRootPart.CanCollide = false
                                                     PosMonMasteryFruit = v.HumanoidRootPart.CFrame
                                                     v.Humanoid.WalkSpeed = 0
@@ -7024,15 +6773,16 @@ spawn(function()
                                                     UseSkill = false 
                                                     AutoHaki()
                                                     EquipWeapon(_G.SelectWeapon)
-                                                    topos(v.HumanoidRootPart.CFrame * CFrame.new(0,20,0))
+                                                    topos(v.HumanoidRootPart.CFrame * CFrame.new(0,40,0))
                                                     v.HumanoidRootPart.CanCollide = false
                                                     PosMonMasteryFruit = v.HumanoidRootPart.CFrame
                                                     v.Humanoid.WalkSpeed = 0
                                                     v.Head.CanCollide = false
+                                                    game:GetService'VirtualUser':CaptureController()
+                                                    game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
                                                 end
                                                 StartMasteryFruitMagnet = true
                                                 game:GetService'VirtualUser':CaptureController()
-                                                game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
                                             until not _G.AutoFarmFruitMastery or v.Humanoid.Health <= 0 or not v.Parent or game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible == false
                                         else
                                             UseSkill = false
@@ -7288,6 +7038,53 @@ end)
         end)
     end)
     
+    spawn(function()
+	local gg = getrawmetatable(game)
+	local old = gg.__namecall
+	setreadonly(gg,false)
+	gg.__namecall = newcclosure(function(...)
+		local method = getnamecallmethod()
+		local args = {...}
+		if tostring(method) == "FireServer" then
+			if tostring(args[1]) == "RemoteEvent" then
+				if tostring(args[2]) ~= "true" and tostring(args[2]) ~= "false" then
+					if UseSkillMasteryDevilFruit and  _G.AutoFarmGunMastery then
+						if type(args[2]) == "vector" then 
+							args[2] = PosMonMasteryGun
+						else
+							args[2] = CFrame.new(PosMonMasteryGun)
+						end
+						return old(unpack(args))
+					end
+				end
+			end
+		end
+		return old(...)
+	end)
+end)
+    
+    spawn(function()
+	local gt = getrawmetatable(game)
+	local old = gt.__namecall
+	setreadonly(gt,false)
+	gt.__namecall = newcclosure(function(...)
+		local args = {...}
+		if getnamecallmethod() == "InvokeServer" then 
+			if SelectWeaponGun then
+				if SelectWeaponGun == "Soul Guitar" then
+					if tostring(args[2]) == "TAP" then
+						if _G.AutoFarmGunMastery and UseSkillMasteryGun then
+							args[3] = PosMonMasteryGun
+						end
+					end
+				end
+			end
+		end
+		return old(unpack(args))
+	end)
+	setreadonly(gt,true)
+end)
+    
     Main:AddToggleLeft("Auto Farm Gun Mastery",_G.AutoFarmGunMastery,function(value)
         _G.AutoFarmGunMastery = value
         StopTween(_G.AutoFarmGunMastery)
@@ -7316,38 +7113,41 @@ end)
                             pcall(function()
                                 for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                                     if v.Name == Mon then
+                                      PosMonMasteryGun = v.HumanoidRootPart.CFrame
                                         repeat task.wait()
                                             if string.find(game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, NameMon) then
                                                 HealthMin = v.Humanoid.MaxHealth * _G.Kill_At/100
-                                                if v.Humanoid.Health <= HealthMin then                                                
+                                                if v.Humanoid.Health <= HealthMin then 
+                                                UseSkillMasteryGun = true
                                                     EquipWeapon(SelectWeaponGun)
                                                     topos(v.HumanoidRootPart.CFrame * CFrame.new(0,15,0))
                                                     v.Humanoid.WalkSpeed = 0
                                                     v.HumanoidRootPart.CanCollide = false
-                                                    game:GetService'VirtualUser':CaptureController()
-                                                    game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
-                                                    local args = {
-                                                        [1] = v.HumanoidRootPart.Position,
-                                                    }
-                                                    game:GetService("Players").LocalPlayer.Character[SelectWeaponGun].RemoteFunctionShoot:InvokeServer(unpack(args))                                               
+                                                    Click()
+								local args = {
+									[1] = v.HumanoidRootPart.Position,
+									[2] = v.HumanoidRootPart
+								}
+								game:GetService("Players").LocalPlayer.Character[SelectWeaponGun].RemoteFunctionShoot:InvokeServer(unpack(args))
                                                     else
+                                                    UseSkillMasteryGun = false
                                                     AutoHaki()
                                                     EquipWeapon(_G.SelectWeapon)
                                                     v.Humanoid.WalkSpeed = 0
                                                     v.HumanoidRootPart.CanCollide = false
                                                     v.Head.CanCollide = false               
-                                                    topos(v.HumanoidRootPart.CFrame * CFrame.new(0,15,0))
+                                                    topos(v.HumanoidRootPart.CFrame * CFrame.new(0,40,0))
                                                     game:GetService'VirtualUser':CaptureController()
                                                     game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
                                                 end
                                                 StartMasteryGunMagnet = true 
-                                                PosMonMasteryGun = v.HumanoidRootPart.CFrame
                                             else
                                                 StartMasteryGunMagnet = false
                                                 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("AbandonQuest")
                                             end
                                         until v.Humanoid.Health <= 0 or _G.AutoFarmGunMastery == false or game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible == false
-                                        StartMasteryGunMagnet = false
+                                      UseSkillMasteryGun = false
+                                      StartMasteryGunMagnet = false
                                     end
                                 end
                             end)
@@ -7370,6 +7170,19 @@ end)
         end)
     end)
     
+     Main:AddSeperatorLeft("Distance Mastery Fram")
+  _G.Distance_X = 0
+    Main:AddSliderLeft("X",1,100,_G.Distance_X,function(value)
+        _G.Distance_X = value
+    end)
+    _G.Distance_Y = 50
+    Main:AddSliderLeft("Y",1,100,_G.Distance_Y,function(value)
+        _G.Distance_Y = value
+    end)
+    _G.Distance_Z = 0
+    Main:AddSliderLeft("Z",1,100,_G.Distance_Z,function(value)
+        _G.Distance_Z = value
+    end)
     Main:AddSeperatorLeft("Fruits Skill Settings")
     
     Main:AddToggleLeft("Skill Z",true,function(value)
@@ -8202,243 +8015,180 @@ end
 end
     
     Main:AddToggleLeft("Auto Dough V2 [Beta]",nil,function(a)
-_G.dv2 = a
+_G.Auto_Open_Dough_Dungeon = a
 StopTween()
     end)
+    
+    spawn(function()
+           game:GetService("RunService").Heartbeat:Connect(function()
+               pcall(function()
+                   for a,a in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+                       if _G.Auto_Open_Dough_Dungeon and StartCakeMagnet and (a.Name == "Cookie Crafter [Lv. 2200]" or a.Name == "Cake Guard [Lv. 2225]" or a.Name == "Baking Staff [Lv. 2250]" or a.Name == "Head Baker [Lv. 2275]") and (a.HumanoidRootPart.Position - POSCAKE.Position).magnitude <= 350 then
+                           a.HumanoidRootPart.CFrame = POSCAKE
+                           a.HumanoidRootPart.CanCollide = false
+                           a.HumanoidRootPart.Size = Vector3.new(50,50,50)
+                           if a.Humanoid:FindFirstChild("Animator") then
+                               a.Humanoid.Animator:Destroy()
+                           end
+                           sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius",  math.huge)
+                       end
+                   end
+               end)
+           end)
+end)
 
-spawn(function()
-				while wait() do
-					if _G.dv2 then
-						if not game:GetService("Workspace").Map.CakeLoaf:FindFirstChild("RedDoor") then
-							if game.Players.LocalPlayer.Character:FindFirstChild("Red Key") or game.Players.LocalPlayer.Backpack:FindFirstChild("Red Key") then
-								local args = {
-									[1] = "CakeScientist",
-									[2] = "Check"
-								}
+   spawn(function()
+        while task.wait() do
+            pcall(function()
+                if _G.BringMon then
+                   for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+                       if _G.Auto_Open_Dough_Dungeon and StartMagnetCocoaa then
+                            if (v.HumanoidRootPart.Position - PosMonCocoaa.Position).Magnitude <= 300 and v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+                                v.HumanoidRootPart.Size = Vector3.new(50,50,50)
+                                v.Humanoid:ChangeState(14)
+                                v.HumanoidRootPart.CanCollide = false
+                                v.Head.CanCollide = false
+                                v.HumanoidRootPart.CFrame = PosMonCocoaa
+                                if v.Humanoid:FindFirstChild("Animator") then
+                                    v.Humanoid.Animator:Destroy()
+                                end
+                                sethiddenproperty(game:GetService("Players").LocalPlayer, "SimulationRadius", math.huge)
+                              end
+                        end
+                    end
+                end
+            end)
+        end
+    end)
+    
+       spawn(function()
+           while wait() do
+               if _G.Auto_Open_Dough_Dungeon then
+                   pcall(function()
+                       if game.Players.LocalPlayer.Backpack:FindFirstChild("God's Chalice") or game.Players.LocalPlayer.Character:FindFirstChild("God's Chalice") then
+                           if string.find(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SweetChaliceNpc"),"Where") then
+                               game.StarterGui:SetCore("SendNotification", {
+                                   Title = "Notification", 
+                                   Text = "Not Have Enough Material" ,
+                                   Icon = "",
+                                   Duration = 2.5
+                               })
+                           else
+                               game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SweetChaliceNpc")
+                           end
+                       elseif game.Players.LocalPlayer.Backpack:FindFirstChild("Sweet Chalice") or game.Players.LocalPlayer.Character:FindFirstChild("Sweet Chalice") then
+                           if string.find(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),"Do you want to open the portal now?") then
+                               game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")
+                           else
+                               if game.Workspace.Enemies:FindFirstChild("Baking Staff [Lv. 2250]") or game.Workspace.Enemies:FindFirstChild("Head Baker [Lv. 2275]") or game.Workspace.Enemies:FindFirstChild("Cake Guard [Lv. 2225]") or game.Workspace.Enemies:FindFirstChild("Cookie Crafter [Lv. 2200]")  then
+                                   for b,b in pairs(game:GetService("Workspace").Enemies:GetChildren()) do  
+                                       if (b.Name == "Baking Staff [Lv. 2250]" or b.Name == "Head Baker [Lv. 2275]" or b.Name == "Cake Guard [Lv. 2225]" or b.Name == "Cookie Crafter [Lv. 2200]") and b.Humanoid.Health > 0 then
+                                           repeat wait()
+                                               AutoHaki()
+                                               EquipWeapon(_G.SelectWeapon)
+                                               StartCakeMagnet = true
+                                               b.HumanoidRootPart.Size = Vector3.new(60, 60, 60)  
+                                               POSCAKE = b.HumanoidRootPart.CFrame
+                                               topos(b.HumanoidRootPart.CFrame * CFrame.new(0,40,0))
+                                               game:GetService'VirtualUser':CaptureController()
+                                               game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                           until _G.Auto_Open_Dough_Dungeon == false or game:GetService("ReplicatedStorage"):FindFirstChild("Cake Prince [Lv. 2300] [Raid Boss]") or not b.Parent or b.Humanoid.Health <= 0
+                                       end
+                                   end
+                               else
+                                   StartCakeMagnet = false
+                                   topos(CFrame.new(-1820.0634765625, 210.74781799316406, -12297.49609375))
+                               end
+                           end						
+                       elseif game.ReplicatedStorage:FindFirstChild("Dough King [Lv. 2300] [Raid Boss]") or game:GetService("Workspace").Enemies:FindFirstChild("Dough King [Lv. 2300] [Raid Boss]") then
+                           if game:GetService("Workspace").Enemies:FindFirstChild("Dough King [Lv. 2300] [Raid Boss]") then
+                               for b,b in pairs(game:GetService("Workspace").Enemies:GetChildren()) do 
+                                   if b.Name == "Dough King [Lv. 2300] [Raid Boss]" then
+                                       repeat wait()
+                                           AutoHaki()
+                                           EquipWeapon(_G.SelectWeapon)
+                                           b.HumanoidRootPart.CanCollide = false
+                                           topos(b.HumanoidRootPart.CFrame * CFrame.new(0,-45,-40))
+                                           game:GetService'VirtualUser':CaptureController()
+                                           game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                       until _G.Auto_Open_Dough_Dungeon == false or not b.Parent or b.Humanoid.Health <= 0
+                                   end    
+                               end    
+                           else
+                               topos(CFrame.new(-2009.2802734375, 4532.97216796875, -14937.3076171875)) 
+                           end
+                       elseif game.Players.LocalPlayer.Backpack:FindFirstChild("Red Key") or game.Players.LocalPlayer.Character:FindFirstChild("Red Key") then
+                           local a = {
+                               [1] = "CakeScientist",
+                               [2] = "Check"
+                           }
+   
+                           game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(a))
+                       else
+                                                          game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("EliteHunter")
+                           if game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible == true then
+                               if string.find(game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text,"Diablo") or string.find(game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text,"Deandre") or string.find(game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text,"Urban") then
+                                   if game:GetService("Workspace").Enemies:FindFirstChild("Diablo [Lv. 1750]") or game:GetService("Workspace").Enemies:FindFirstChild("Deandre [Lv. 1750]") or game:GetService("Workspace").Enemies:FindFirstChild("Urban [Lv. 1750]") then
+                                       for b,b in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+                                           if b.Name == "Diablo [Lv. 1750]" or b.Name == "Deandre [Lv. 1750]" or b.Name == "Urban [Lv. 1750]" then
+                                               if b:FindFirstChild("Humanoid") and b:FindFirstChild("HumanoidRootPart") and b.Humanoid.Health > 0 then
+                                                   repeat wait()
+                                                       AutoHaki()
+                                                       EquipWeapon(_G.SelectWeapon)
+                                                       b.HumanoidRootPart.CanCollide = false
+                                                       b.Humanoid.WalkSpeed = 0
+                                                       topos(b.HumanoidRootPart.CFrame * CFrame.new(0,45,0))
+                                                       game:GetService("VirtualUser"):CaptureController()
+                                                       game:GetService("VirtualUser"):Button1Down(Vector2.new(1280,672))
+                                                       sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius",math.huge)
+                                                   until _G.Auto_Open_Dough_Dungeon == false or b.Humanoid.Health <= 0 or not b.Parent or game.Players.LocalPlayer.Backpack:FindFirstChild("God's Chalice") or game.Players.LocalPlayer.Character:FindFirstChild("God's Chalice")
+                                               end
+                                           end
+                                       end
+                                   else
+                                       if game:GetService("ReplicatedStorage"):FindFirstChild("Diablo [Lv. 1750]") then
+                                           topos(game:GetService("ReplicatedStorage"):FindFirstChild("Diablo [Lv. 1750]").HumanoidRootPart.CFrame * CFrame.new(0,45,0))
+                                       elseif game:GetService("ReplicatedStorage"):FindFirstChild("Deandre [Lv. 1750]") then
+                                           topos(game:GetService("ReplicatedStorage"):FindFirstChild("Deandre [Lv. 1750]").HumanoidRootPart.CFrame * CFrame.new(0,45,0))
+                                       elseif game:GetService("ReplicatedStorage"):FindFirstChild("Urban [Lv. 1750]") then
+                                           topos(game:GetService("ReplicatedStorage"):FindFirstChild("Urban [Lv. 1750]").HumanoidRootPart.CFrame * CFrame.new(0,45,0))
+                                       end
+                                   end                    
+                               end
+                           else
+                           if game:GetService("Workspace").Enemies:FindFirstChild("Cocoa Warrior [Lv. 2300]") or game:GetService("Workspace").Enemies:FindFirstChild("Chocolate Bar Battler [Lv. 2325]") then
+                        for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+                            if v.Name == "Cocoa Warrior [Lv. 2300]" or v.Name == "Chocolate Bar Battler [Lv. 2325]" then
+                                if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+                                    repeat task.wait()
+                                        AutoHaki()
+                                        EquipWeapon(_G.SelectWeapon)
+                                        v.HumanoidRootPart.CanCollide = false
+                                        v.Humanoid.WalkSpeed = 0
+                                        v.Head.CanCollide = false 
+                                        StartMagnetCocoaa = true
+                                        PosMonCocoaa = v.HumanoidRootPart.CFrame
+                                        topos(v.HumanoidRootPart.CFrame * CFrame.new(0,40,0))
+                                        game:GetService("VirtualUser"):CaptureController()
+                                        game:GetService("VirtualUser"):Button1Down(Vector2.new(1280,672))
+                                    until not _G.Auto_Open_Dough_Dungeon or not v.Parent or v.Humanoid.Health <= 0 or game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible == true
+                                end
+                            end
+                        end
+                    else
+                        StartMagnetCocoaa = false
+                        topos(CFrame.new(394.69036865234375, 79.11857604980469, -12256.5712890625))
 
-								game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))    
-								local args = {
-									[1] = "RaidsNpc",
-									[2] = "Check"
-								}
-
-								game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))                        
-							end
-						elseif game:GetService("Workspace").Map.CakeLoaf:FindFirstChild("RedDoor") then
-							if game.Players.LocalPlayer.Character:FindFirstChild("Red Key") or game.Players.LocalPlayer.Backpack:FindFirstChild("Red Key") then
-								RedDorTween = toTargetP(CFrame.new(-2681.97998, 64.3921585, -12853.7363, 0.149007782, -1.87902192e-08, 0.98883605, 3.60619588e-08, 1, 1.35681812e-08, -0.98883605, 3.36376011e-08, 0.149007782))
-								if (CFrame.new(-2681.97998, 64.3921585, -12853.7363, 0.149007782, -1.87902192e-08, 0.98883605, 3.60619588e-08, 1, 1.35681812e-08, -0.98883605, 3.36376011e-08, 0.149007782).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 5 then
-									if RedDorTween then RedDorTween:Stop() end
-									game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2681.97998, 64.3921585, -12853.7363, 0.149007782, -1.87902192e-08, 0.98883605, 3.60619588e-08, 1, 1.35681812e-08, -0.98883605, 3.36376011e-08, 0.149007782)
-									EquipWeapon("Red Key")
-								end
-							elseif game.Workspace:FindFirstChild("Enemies"):FindFirstChild("Dough King [Lv. 2300] [Raid Boss]") or game:GetService("ReplicatedStorage"):FindFirstChild("Dough King [Lv. 2300] [Raid Boss]") then
-								if game:GetService("Workspace").Enemies:FindFirstChild("Dough King [Lv. 2300] [Raid Boss]") then
-									for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
-										if _G.dv2 and v.Name == "Dough King [Lv. 2300] [Raid Boss]" and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
-											repeat wait()
-												if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude > 300 then
-													Farmtween = toTarget(v.HumanoidRootPart.CFrame)
-												elseif (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 300 then
-													if Farmtween then
-														Farmtween:Stop()
-													end
-                                    EquipWeapon(_G.SelectWeapon)
-													v.HumanoidRootPart.Size = Vector3.new(55,55,55)
-													FastAttack = true
-													game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0, 30, 0)
-												end
-											until not _G.dv2 or not v.Parent or v.Humanoid.Health <= 0 or game:GetService("ReplicatedStorage"):FindFirstChild("Dough King [Lv. 2300] [Raid Boss]")
-											FastAttack = false
-										end
-									end
-								else
-									if game:GetService("Workspace").Map.CakeLoaf.BigMirror.Other.Transparency == 0 then
-										FastAttack = false
-										Questtween = toTargetP(CFrame.new(-2151.82153, 149.315704, -12404.9053))
-										if (CFrame.new(-2151.82153, 149.315704, -12404.9053).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 300 then
-											if Questtween then Questtween:Stop() end
-											game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2151.82153, 149.315704, -12404.9053)
-										end
-									end 
-								end
-							elseif game.Players.LocalPlayer.Character:FindFirstChild("Sweet Chalice") or game.Players.LocalPlayer.Backpack:FindFirstChild("Sweet Chalice") then
-								--if string.find(tostring(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner", true)),"already") then
-
-								--else
-								game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner", true)
-								game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")
-								if game:GetService("Workspace").Enemies:FindFirstChild("Cookie Crafter [Lv. 2200]") or game:GetService("Workspace").Enemies:FindFirstChild("Cake Guard [Lv. 2225]") or game:GetService("Workspace").Enemies:FindFirstChild("Baking Staff [Lv. 2250]") or game:GetService("Workspace").Enemies:FindFirstChild("Head Baker [Lv. 2275]") then
-									for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
-										if _G.dv2 and (v.Name == "Cookie Crafter [Lv. 2200]" or v.Name == "Cake Guard [Lv. 2225]" or v.Name == "Baking Staff [Lv. 2250]" or v.Name == "Head Baker [Lv. 2275]") and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
-											repeat wait()
-												if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude > 300 then
-													Farmtween = toTarget(v.HumanoidRootPart.CFrame)
-												elseif (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 300 then
-													if Farmtween then Farmtween:Stop() end
-													FastAttack = true
-													PosFarmCakePrince = v.HumanoidRootPart.CFrame
-                                    EquipWeapon(_G.SelectWeapon)
-													game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0, 30, 0)
-													MagnetFarmCakePrince = true
-													game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner", true)
-													game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")
-												end
-											until not _G.dv2 or not v.Parent or v.Humanoid.Health <= 0
-											FastAttack = false
-											MagnetFarmCakePrince = false
-										end
-									end
-								else
-									MagnetFarmCakePrince = false
-									FastAttack = false
-									Questtween = toTarget(CFrame.new(-2077, 252, -12373))
-									if (CFrame.new(-2077, 252, -12373).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 300 then
-										if Questtween then Questtween:Stop() end
-										game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2077, 252, -12373)
-									end
-								end
-
-								--end
-							elseif (game.Players.LocalPlayer.Backpack:FindFirstChild("God's Chalice") or game.Players.LocalPlayer.Character:FindFirstChild("God's Chalice")) and GetMaterial("Conjured Cocoa") >= 10 then
-								game.ReplicatedStorage.Remotes.CommF_:InvokeServer("SweetChaliceNpc")
-							elseif not game.Players.LocalPlayer.Backpack:FindFirstChild("God's Chalice") and not game.Players.LocalPlayer.Character:FindFirstChild("God's Chalice") and (game.Workspace.Enemies:FindFirstChild("Deandre [Lv. 1750]") or game.Workspace.Enemies:FindFirstChild("Urban [Lv. 1750]") or game.Workspace.Enemies:FindFirstChild("Diablo [Lv. 1750]") or game.ReplicatedStorage:FindFirstChild("Deandre [Lv. 1750]") or game.ReplicatedStorage:FindFirstChild("Urban [Lv. 1750]") or game.ReplicatedStorage:FindFirstChild("Diablo [Lv. 1750]")) then
-								if game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == true then
-									if string.find(game.Players.LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, "Diablo") or string.find(game.Players.LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, "Urban") or string.find(game.Players.LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, "Deandre") then
-										for i,v in pairs(game:GetService("ReplicatedStorage"):GetChildren()) do
-											if string.find(v.Name,"Diablo") then
-												DoughTween = toTarget(v.HumanoidRootPart.CFrame)
-												if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 150 then
-													if DoughTween then
-														DoughTween:Stop()
-													end
-													game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame
-												end
-											end	
-											if string.find(v.Name,"Urban") then
-												DoughTween = toTarget(v.HumanoidRootPart.CFrame)
-												if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 150 then
-													if DoughTween then
-														DoughTween:Stop()
-													end
-													game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame
-												end
-											end	
-											if string.find(v.Name,"Deandre") then
-												DoughTween = toTarget(v.HumanoidRootPart.CFrame)
-												if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 150 then
-													if DoughTween then
-														DoughTween:Stop()
-													end
-													game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame
-												end
-											end	
-										end
-										for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
-											if _G.dv2 and string.find(v.Name,"Diablo") and v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
-												repeat wait()
-													if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude > 300 then
-														Farmtween = toTarget(v.HumanoidRootPart.CFrame)
-													elseif (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 300 then
-														if Farmtween then
-															Farmtween:Stop()
-														end
-                                    EquipWeapon(_G.SelectWeapon)
-														FastAttack = true
-														game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0, 30, 0)
-													end 
-												until not _G.dv2 or not v.Parent or v.Humanoid.Health <= 0
-												FastAttack = false
-											end
-											if _G.dv2 and string.find(v.Name,"Urban") and v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
-												repeat wait()
-													if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude > 300 then
-														Farmtween = toTarget(v.HumanoidRootPart.CFrame)
-													elseif (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 300 then
-														if Farmtween then
-															Farmtween:Stop()
-														end
-                                    EquipWeapon(_G.SelectWeapon)
-														FastAttack = true
-														game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0, 30, 0)
-													end 
-												until not _G.dv2 or not v.Parent or v.Humanoid.Health <= 0
-												FastAttack = false
-											end
-											if _G.dv2 and string.find(v.Name,"Deandre") and v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
-												repeat wait()
-													if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude > 300 then
-														Farmtween = toTarget(v.HumanoidRootPart.CFrame)
-													elseif (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 300 then
-														if Farmtween then
-															Farmtween:Stop()
-														end
-                                    EquipWeapon(_G.SelectWeapon)
-														FastAttack = true
-														game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0, 30, 0)
-													end 
-												until not _G.dv2 or not v.Parent or v.Humanoid.Health <= 0
-												FastAttack = false
-											end
-										end
-									else
-										local string_1 = "EliteHunter";
-										local Target = game:GetService("ReplicatedStorage").Remotes["CommF_"];
-										Target:InvokeServer(string_1);
-									end
-								else
-									local string_1 = "EliteHunter";
-									local Target = game:GetService("ReplicatedStorage").Remotes["CommF_"];
-									Target:InvokeServer(string_1);
-								end
-							else
-								if game:GetService("Workspace").Enemies:FindFirstChild("Candy Rebel [Lv. 2375]") or game:GetService("Workspace").Enemies:FindFirstChild("Sweet Thief [Lv. 2350]") or game:GetService("Workspace").Enemies:FindFirstChild("Chocolate Bar Battler [Lv. 2325]") or game:GetService("Workspace").Enemies:FindFirstChild("Cocoa Warrior [Lv. 2300]") then
-									for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
-										if _G.dv2 and (v.Name == "Candy Rebel [Lv. 2375]" or v.Name == "Sweet Thief [Lv. 2350]" or v.Name == "Chocolate Bar Battler [Lv. 2325]" or v.Name == "Cocoa Warrior [Lv. 2300]") and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
-											repeat wait()
-												-- if game.Players.LocalPlayer:DistanceFromCharacter(v.HumanoidRootPart.Position) > 3500 then
-												--     if Questtween then Questtween:Stop() end
-												--     if game.Players.LocalPlayer.Character:WaitForChild("Humanoid"):GetState() == Enum.HumanoidStateType.Dead then return end
-												--     ResetSetSpawn(v.HumanoidRootPart.CFrame)
-												-- else
-												if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude > 150 then
-													Farmtween = toTarget(v.HumanoidRootPart.CFrame)
-													FastAttack = false
-												elseif (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 150 then
-													if Farmtween then Farmtween:Stop() end
-													FastAttack = true
-													PosFarmCoco = v.HumanoidRootPart.CFrame
-                                    EquipWeapon(_G.SelectWeapon)
-													game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0, 30, 0)
-													MagnetFarmCoco = true
-												end
-											until not _G.dv2 or not v.Parent or v.Humanoid.Health <= 0
-											FastAttack = false
-											MagnetFarmCoco = false
-										end
-									end
-								else
-									MagnetFarmCoco = false
-									FastAttack = false
-									Questtween = toTarget(CFrame.new(620.6344604492188, 78.93644714355469, -12581.369140625))
-									if (CFrame.new(620.6344604492188, 78.93644714355469, -12581.369140625).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 150 then
-										if Questtween then
-											Questtween:Stop()
-										end
-										game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(620.6344604492188, 78.93644714355469, -12581.369140625)
-									end
-								end
-							end
-						else
-							print("Error Whyyy")
-						end
-					else
-						break;
-					end
-				end
-			end)
-
-
+                        
+                           end
+                          
+                           end
+                   end
+                   end)
+               end
+           end
+       end)
+       
 	spawn(function()
 		while wait() do
 			if _G.Settings.Main["Auto Dough V2"] then
@@ -8871,7 +8621,7 @@ Main:AddSeperatorLeft("Observation")
         pcall(function()
             while wait() do
                 if _G.AutoObservation then
-                    if game:GetService("Players").LocalPlayer.VisionRadius.Value >= 3000 then
+                    if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("KenTalk","Status") == 5000 then
                         game:GetService("StarterGui"):SetCore("SendNotification", {
                             Icon = "rbxassetid://0";
                             Title = "Observation", 
@@ -11239,3 +10989,9 @@ end
     Misc:AddSeperatorRight("Credit")
     Misc:AddLabelRight("Ui : ball naja#3764")
     Misc:AddLabelRight("Dev : ball naja#3764")
+    
+    else
+    game.Players.LocalPlayer:Kick("\224\185\132\224\184\161\224\185\136\224\184\158\224\184\154\224\185\129\224\184\161\224\184\158")
+    wait(1)
+    game:Shutdown()
+end
